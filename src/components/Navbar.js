@@ -4,50 +4,79 @@ import { Link } from "react-router-dom";
 function Navbar() {
 	return (
 		<div className=''>
-			<div className='flex space-x-5 h-14 items-center bg-stone-200 w-screen'>
+			<div className='flex space-x-5 h-14 items-center bg-rose-900 w-screen'>
 				<div className='px-10'>
-					<Link to='/' className='text-xs font-bold text-black  '>
-						Onexearth
+					<Link to='/' className='text-xl font-bold text-white  '>
+						OneXearth
 					</Link>
 				</div>
-				<div className='flex space-x-10'>
-					<div>
-						<Link to='/sport/sports' className='text-xs font-bold text-black  '>
+				<div className='flex space-x-5'>
+					<div className='bg-rose-700 px-4 py-1 rounded-lg '>
+						<Link to='/sport/sports' className='text-xs font-bold text-white  '>
+							Mobile App
+						</Link>
+					</div>
+					<div className='  py-1 '>
+						<Link
+							to='/sport/sports'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							Sport
 						</Link>
 					</div>
-					<div>
-						<Link to='/sport/live' className='text-xs font-bold text-black  '>
+					<div className='  py-1 '>
+						<Link
+							to='/sport/live'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							Live
 						</Link>
 					</div>
-					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+					<div className='  py-1 '>
+						<Link
+							to='/invoices'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							Cricket
 						</Link>
 					</div>
-					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+					<div className='  py-1 '>
+						<Link
+							to='/invoices'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							Promo
 						</Link>
 					</div>
-					<div>
-						<Link to='/casino/all' className='text-xs font-bold text-black  '>
+					<div className='  py-1 '>
+						<Link
+							to='/casino/all'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							Casino
 						</Link>
 					</div>
-					<div>
-						<Link to='/casino/' className='text-xs font-bold text-black  '>
+					<div className='  py-1 '>
+						<Link
+							to='/casino-live/all'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							Live Casino
 						</Link>
 					</div>
-					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+					<div className='  py-1 '>
+						<Link
+							to='/invoices'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							Esport
 						</Link>
 					</div>
-					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+					<div className='  py-1 '>
+						<Link
+							to='/invoices'
+							className='text-xs font-bold text-neutral-400  '
+						>
 							More
 						</Link>
 					</div>

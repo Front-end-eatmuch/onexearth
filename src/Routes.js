@@ -16,6 +16,14 @@ import CasinoSlots from "./pages/Casino/CasinoSlots/CasinoSlots";
 import CasinoBonusbuy from "./pages/Casino/CasinoBonusbuy/CasinoBonusbuy";
 import CasinoJackpot from "./pages/Casino/CasinoJackpot/CasinoJackpot";
 import CasinoOther from "./pages/Casino/CasinoOther/CasinoOther";
+import CasinoLive from "./pages/CasinoLive/CasinoLive";
+import CasinoLiveAll from "./pages/CasinoLive/CasinoLiveAll/CasinoLiveAll";
+import CasinoLivePopular from "./pages/CasinoLive/CasinoLivePopular/CasinoLivePopular";
+import CasinoLiveNewgame from "./pages/CasinoLive/CasinoLiveNewgame/CasinoLiveNewgame";
+import CasinoliveSlots from "./pages/CasinoLive/CasinoLiveSlots/CasinoliveSlots";
+import CasinoLiveBonusbuy from "./pages/CasinoLive/CasinoLiveBonusbuy/CasinoLiveBonusbuy";
+import CasinoLiveJackpot from "./pages/CasinoLive/CasinoLiveJackpot/CasinoLiveJackpot";
+import CasinoLiveOther from "./pages/CasinoLive/CasinoLiveOther/CasinoLiveOther";
 
 function Routess() {
 	const routes = useRoutes([
@@ -49,6 +57,22 @@ function Routess() {
 				{ path: "bonusbuy", element: <CasinoBonusbuy /> },
 				{ path: "jackpot", element: <CasinoJackpot /> },
 				{ path: "other", element: <CasinoOther /> },
+			],
+		},
+		{
+			path: "casino-live",
+			element: <CasinoLive />,
+			children: [
+				{
+					path: "all",
+					element: <CasinoLiveAll />,
+				},
+				{ path: "popular", element: <CasinoLivePopular /> },
+				{ path: "newgame", element: <CasinoLiveNewgame /> },
+				{ path: "slots", element: <CasinoliveSlots /> },
+				{ path: "bonusbuy", element: <CasinoLiveBonusbuy /> },
+				{ path: "jackpot", element: <CasinoLiveJackpot /> },
+				{ path: "other", element: <CasinoLiveOther /> },
 			],
 		},
 	]);
