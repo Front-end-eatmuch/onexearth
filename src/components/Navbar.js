@@ -12,12 +12,12 @@ function Navbar() {
 				</div>
 				<div className='flex space-x-10'>
 					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+						<Link to='/sport/sports' className='text-xs font-bold text-black  '>
 							Sport
 						</Link>
 					</div>
 					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+						<Link to='/sport/live' className='text-xs font-bold text-black  '>
 							Live
 						</Link>
 					</div>
@@ -32,12 +32,12 @@ function Navbar() {
 						</Link>
 					</div>
 					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+						<Link to='/casino/all' className='text-xs font-bold text-black  '>
 							Casino
 						</Link>
 					</div>
 					<div>
-						<Link to='/invoices' className='text-xs font-bold text-black  '>
+						<Link to='/casino/' className='text-xs font-bold text-black  '>
 							Live Casino
 						</Link>
 					</div>

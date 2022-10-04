@@ -9,7 +9,7 @@ function Sport() {
 				{/* the outlet is a grid which contains a subroute to a subpage
 				it is initial full in width then shares width with betslip when
 				the large  screeen is met . after which it take col-span-10
-				2.outlet are subpages eg: sportpage and livepage
+				2.outlet are subpages eg: sportpage and
 				*/}
 				<div className='col-span-full lg:col-span-10   '>
 					<Outlet />

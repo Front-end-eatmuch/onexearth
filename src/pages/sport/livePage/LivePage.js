@@ -1,6 +1,6 @@
 import React from "react";
-import LiveSideBar from "../../components/sidebars/LiveSideBar";
-import LiveContainer from "../../container/LiveContainer/LiveContainer";
+import LiveSideBar from "../../../components/sidebars/LiveSideBar";
+import LiveContainer from "../../../container/LiveContainer/LiveContainer";
 
 function LivePage() {
 	return (
