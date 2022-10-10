@@ -78,11 +78,11 @@ function SportContainer() {
 	]);
 	return (
 		<div className=''>
-			<div className=' flex justify-between'>
+			<div className='px-4 flex justify-between'>
 				<div>Sportbets</div>
 				<div>search</div>
 			</div>
-			<div className=' flex space-x-10'>
+			<div className='px-4 flex space-x-10'>
 				<div className='w-52 bg-slate-500'>
 					<Link to='/' className='text-xs font-bold text-black  '>
 						Sport

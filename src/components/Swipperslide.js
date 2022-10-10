@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
-import { Pagination } from "swiper";
+import {
+	EffectCube,
+	Keyboard,
+	Mousewheel,
+	Navigation,
+	Pagination,
+} from "swiper";
 function Swipperslide() {
 	return (
-		<div>
+		<div className='w-full'>
 			{" "}
-			<div className='w-full h-96 bg-slate-400'>
+			<div className='w-full h-small2 bg-white  relative'>
 				<Swiper
-					pagination={{
-						dynamicBullets: true,
-					}}
-					modules={[Pagination]}
-					className='h-96'
+					cssMode={true}
+					navigation={true}
+					pagination={true}
+					mousewheel={true}
+					keyboard={true}
+					modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+					className='h-full  w-full'
 				>
 					<SwiperSlide>Slide 1</SwiperSlide>
 					<SwiperSlide>Slide 2</SwiperSlide>

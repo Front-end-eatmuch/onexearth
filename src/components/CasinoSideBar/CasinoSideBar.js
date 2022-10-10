@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CasinoSideBar() {
 	return (
 		<div className='w-full   '>
-			<div className='w-full pt-10  border-gray-400 border-2'>
+			<div className='w-full pt-10  border-gray-400 border-2 bg-white'>
 				<div className=' w-full text-center  '>CasinoSideBar</div>
 				<div className='w-full px-6 pt-10'>
 					<div className='grid grid-cols-2'>

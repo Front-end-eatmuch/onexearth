@@ -93,11 +93,11 @@ function LiveContainer() {
 	console.log(liveTableaus);
 	return (
 		<div className=''>
-			<div className=' flex justify-between'>
+			<div className='px-4 flex justify-between'>
 				<div>livebets</div>
 				<div>search</div>
 			</div>
-			<div className=' flex space-x-10'>
+			<div className=' flex space-x-10 px-4'>
 				<div className='w-52 bg-slate-500'>
 					<Link to='/' className='text-xs font-bold text-black  '>
 						Sport

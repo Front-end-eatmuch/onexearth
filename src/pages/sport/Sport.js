@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Betslip from "../../components/Betslip";
 
 function Sport() {
+	const [open, setOpen] = useState(true);
 	return (
 		<div className=' w-screen'>
 			<div className='grid grid-flow-col grid-cols-12 w-full  '>
@@ -15,6 +16,23 @@ function Sport() {
 					<Outlet />
 				</div>
 				{/* betslip is hidden initially then appear when lg screen is met */}
+				<div
+					className={` absolute  z-20 lg:hidden duration-200 right-0  ${
+						open ? "translate-x-0" : "translate-x-full"
+					}`}
+				>
+					<div className='relative'>
+						<Betslip />
+						<div
+							className='absolute cursor-pointer top-0 z-40 -left-4  '
+							onClick={() => {
+								setOpen(!open);
+							}}
+						>
+							<i class='fa-solid fa-square-caret-left font-extrabold text-xl text-rose-600'></i>
+						</div>
+					</div>
+				</div>
 				<div className='hidden lg:flex'>
 					<Betslip />
 				</div>

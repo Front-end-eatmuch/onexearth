@@ -39,8 +39,23 @@ function Routess() {
 				{
 					path: "sports",
 					element: <SportPage />,
+					children: [
+						{
+							path: "sporttables",
+							element: <SportContainer />,
+						},
+					],
 				},
-				{ path: "live", element: <LivePage /> },
+				{
+					path: "live",
+					element: <LivePage />,
+					children: [
+						{
+							path: "livetables",
+							element: <LiveContainer />,
+						},
+					],
+				},
 			],
 		},
 		{
