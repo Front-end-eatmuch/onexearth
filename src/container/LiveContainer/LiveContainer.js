@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import LiveTable from "./LiveTable";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import LiveHomeSlidder from "../../components/LiveHomeSlidder";
+import LiveSoccerTable from "./LiveSoccerTable/LiveSoccerTable";
+import LiveTable from "./LiveSoccerTable/LiveSoccerTable";
+import LiveTitleBar from "./LiveTitleBar/LiveTitleBar";
+import SportTitleBar from "./LiveTitleBar/LiveTitleBar";
 // import Livesession from "./LiveTable";
 
 function LiveContainer() {
@@ -10,13 +14,13 @@ function LiveContainer() {
 			DataTitle: ["caribean", "color", "category", "price"],
 			Data: [
 				{
-					name: "Apple",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
 				},
 				{
-					name: "Appb",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -28,7 +32,7 @@ function LiveContainer() {
 			DataTitle: ["indian", "color", "category", "price"],
 			Data: [
 				{
-					name: "Samsung",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -40,7 +44,7 @@ function LiveContainer() {
 			DataTitle: ["indian", "color", "category", "price"],
 			Data: [
 				{
-					name: "Samsung",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -52,19 +56,19 @@ function LiveContainer() {
 			DataTitle: ["Americana", "color", "category", "price"],
 			Data: [
 				{
-					name: "Samsung",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
 				},
 				{
-					name: "Apple",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
 				},
 				{
-					name: "Apple",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -76,13 +80,13 @@ function LiveContainer() {
 			DataTitle: ["indian", "color", "category", "price"],
 			Data: [
 				{
-					name: "Samsung",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
 				},
 				{
-					name: "Apple",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -91,46 +95,25 @@ function LiveContainer() {
 		},
 	]);
 	console.log(liveTableaus);
+	let location = useLocation();
 	return (
-		<div className=''>
-			<div className='px-4 flex justify-between'>
+		<div className='px-4'>
+			{location.pathname === "/sport/live/livetables/home" && (
+				<div className='mb-4'>
+					<LiveHomeSlidder />
+				</div>
+			)}
+			<div className='px-4 py-2 flex justify-between bg-indigo-900 text-white'>
 				<div>livebets</div>
 				<div>search</div>
 			</div>
-			<div className=' flex space-x-10 px-4'>
-				<div className='w-52 bg-slate-500'>
-					<Link to='/' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-			</div>
 			<div>
-				<LiveTable liveTableaus={liveTableaus}></LiveTable>
+				<LiveTitleBar />
+			</div>
+
+			<div>
+				{/* <LiveSoccerTable liveTableaus={liveTableaus}></LiveSoccerTable> */}
+				<Outlet context={{ liveTableaus: liveTableaus }} />
 			</div>
 		</div>
 	);

@@ -1,21 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import SportTable from "./SportTable";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import SoccerSubTables from "../../components/SubTables/SportSubTable/SoccerSubTables";
+import LiveSoccerTable from "../LiveContainer/LiveSoccerTable/LiveSoccerTable";
+
+import SportTable from "./SoccerTable/SoccerTable";
+import SportTitleBar from "./SportTitleBar/SportTitleBar";
+import SoccerTable from "./SoccerTable/SoccerTable";
 
 function SportContainer() {
 	const [sportTableaus, setSportTableaus] = useState([
 		{
 			id: 1,
-			DataTitle: ["caribean", "color", "category", "price"],
+			DataTitle: ["Premiere League", "1", "x", "2"],
 			Data: [
 				{
-					name: "Apple",
+					id: "_11",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
 				},
 				{
-					name: "Appb",
+					id: "_12",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -24,10 +31,11 @@ function SportContainer() {
 		},
 		{
 			id: 2,
-			DataTitle: ["indian", "color", "category", "price"],
+			DataTitle: ["A League", "1", "x", "2"],
 			Data: [
 				{
-					name: "Samsung",
+					id: "_21",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -36,16 +44,18 @@ function SportContainer() {
 		},
 		{
 			id: 3,
-			DataTitle: ["samsung", "color", "category", "price"],
+			DataTitle: ["Bondes Liga", "1", "x", "2"],
 			Data: [
 				{
-					name: "apple",
+					id: "_31",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
 				},
 				{
-					name: "appleb",
+					id: "_32",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -54,21 +64,18 @@ function SportContainer() {
 		},
 		{
 			id: 4,
-			DataTitle: [
-				"africa father mother alien ghana",
-				"color",
-				"category",
-				"price",
-			],
+			DataTitle: ["1st Division one", "1", "x", "2"],
 			Data: [
 				{
-					name: "Apple",
+					id: "_41",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
 				},
 				{
-					name: "Appb samsung father mother alien",
+					id: "_42",
+					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
 					color: "silver",
 					category: "laptop",
 					price: 46,
@@ -76,46 +83,22 @@ function SportContainer() {
 			],
 		},
 	]);
+	let location = useLocation();
 	return (
-		<div className=''>
-			<div className='px-4 flex justify-between'>
+		<div className='px-4'>
+			<div></div>
+			<div className='px-4 py-2 flex justify-between bg-indigo-900 text-white'>
 				<div>Sportbets</div>
 				<div>search</div>
 			</div>
-			<div className='px-4 flex space-x-10'>
-				<div className='w-52 bg-slate-500'>
-					<Link to='/' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
+			{
 				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
+					<SportTitleBar />
 				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-				<div>
-					<Link to='/invoices' className='text-xs font-bold text-black  '>
-						Sport
-					</Link>
-				</div>
-			</div>
+			}
 			<div>
-				<SportTable sportTableaus={sportTableaus}></SportTable>
+				<Outlet context={{ sportTableaus: sportTableaus }} />
+				{/* <SoccerTable sportTableaus={sportTableaus} /> */}
 			</div>
 		</div>
 	);

@@ -12,7 +12,7 @@ function Sport() {
 				the large  screeen is met . after which it take col-span-10
 				2.outlet are subpages eg: sportpage and
 				*/}
-				<div className='col-span-full lg:col-span-10   '>
+				<div className='col-span-full lg:col-span-10 mt-2   '>
 					<Outlet />
 				</div>
 				{/* betslip is hidden initially then appear when lg screen is met */}
@@ -24,7 +24,7 @@ function Sport() {
 					<div className='relative'>
 						<Betslip />
 						<div
-							className='absolute cursor-pointer top-0 z-40 -left-4  '
+							className='absolute cursor-pointer top-0 z-50 -left-5  '
 							onClick={() => {
 								setOpen(!open);
 							}}
@@ -33,7 +33,7 @@ function Sport() {
 						</div>
 					</div>
 				</div>
-				<div className='hidden lg:flex'>
+				<div className='hidden lg:col-span-2 lg:flex mt-2 w-full '>
 					<Betslip />
 				</div>
 			</div>

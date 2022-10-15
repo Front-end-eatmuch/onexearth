@@ -101,11 +101,34 @@ function CasinoNewgameSlider(props) {
 					{props.casinoData.map((v) => {
 						return (
 							<SwiperSlide className='w-40 !h-40  text-black'>
-								{true ? (
+								{false ? (
 									<div className='w-full  h-full bg-slate-200 animate-pulse'>
 										<div>{v.id}</div>
 									</div>
-								) : null}
+								) : (
+									<div className='w-full h-full relative '>
+										<img
+											src='https://cdn.pixabay.com/photo/2013/10/28/18/51/brandenburger-tor-201939_1280.jpg'
+											alt=''
+											className='w-full h-full'
+										/>
+										<div className='absolute opacity-0 hover:duration-500 hover:opacity-100 top-0 right-0 left-0 bottom-0 flex justify-center items-center'>
+											<div className='w-2/4 '>
+												<div>
+													<button className=' py-2 w-full bg-orange-500 rounded-2xl'>
+														signup
+													</button>
+												</div>
+												<div className='w-full text-center '>or</div>
+												<div>
+													<button className='w-full py-2 bg-green-400 rounded-2xl'>
+														login
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								)}
 							</SwiperSlide>
 						);
 					})}

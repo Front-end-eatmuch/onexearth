@@ -2,9 +2,9 @@ import React from "react";
 
 function Betslip() {
 	return (
-		<div>
-			<div className='h-96 w-56 bg-slate-400 p-2 space-y-4 '>
-				<div className='px-2 flex space-x-2 py-2 bg-slate-800 text-white items-center'>
+		<div className='w-60 xl:w-full '>
+			<div className='h-full  w-60 lg:w-full  bg-slate-200  p-2 space-y-4 rounded-2xl'>
+				<div className='px-2 flex space-x-2 py-4 bg-indigo-900 text-white items-center'>
 					<div>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -24,7 +24,7 @@ function Betslip() {
 					</div>
 				</div>
 				<div>
-					<div className='px-2 flex space-x-2 py-2 bg-slate-800 text-white items-center justify-between'>
+					<div className='px-2 flex space-x-2 py-4 bg-indigo-900 text-white items-center justify-between'>
 						<div className='font-bold text-xs'>
 							<button>Bet Slip</button>
 						</div>
@@ -44,7 +44,7 @@ function Betslip() {
 						</div>
 					</div>
 					<div className='w-full bg-white h-40'></div>
-					<div className='w-full bg-slate-800 h-16 rounded-b-xl '></div>
+					<div className='w-full bg-indigo-900 h-16 rounded-b-xl '></div>
 				</div>
 			</div>
 		</div>

@@ -11,7 +11,7 @@ import Routess from "../Routes";
 
 function Mainlayout() {
 	return (
-		<div className=''>
+		<div className='relative overscroll-none  '>
 			<BrowserRouter>
 				<div className='relative'>
 					<div className='fixed top-0 z-20'>
@@ -23,6 +23,7 @@ function Mainlayout() {
 				</div>
 			</BrowserRouter>
 			{/* <RouterProvider router={routes} /> */}
+			{/* <div className='absolute top-0 right-0 bottom-0 left-0 bg-slate-300 bg-opacity-70 z-50'></div> */}
 		</div>
 	);
 }

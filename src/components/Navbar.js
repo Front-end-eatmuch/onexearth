@@ -3,120 +3,363 @@ import { Menu } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { matchRoutes, useLocation } from "react-router";
 function Navbar() {
-	const location = useLocation();
-	console.log(location.pathname);
+	let location = useLocation();
+	// let newlocation = location.pathname.substr(0, 13);
+	console.log(location.pathname.slice(0, 10));
+	console.log();
+	// console.log(location.pathname);
 	return (
 		<div className=''>
-			<div className='flex space-x-5 h-14 items-center bg-rose-900 w-screen justify-between'>
-				<div className='px-10'>
-					<Link to='/' className='text-xl font-bold text-white  '>
+			<div className='flex space-x-5  items-center bg-indigo-900 w-screen justify-between'>
+				<div className='px-5'>
+					<Link
+						to='/sport/live/livetables/home'
+						className='text-xl font-bold text-white  '
+					>
 						OneXearth
 					</Link>
 				</div>
-				<div className='flex space-x-5'>
-					<div className='bg-rose-700 px-4 py-1 rounded-lg '>
-						<Link to='/sport/sports' className='text-xs font-bold text-white  '>
-							Mobile App
-						</Link>
-					</div>
-					<div
-						className={`  py-1 flex  items-center  space-x-2 ${
-							location.pathname === "/sport/sports/sporttables"
-								? "border-b-gray-200 border-b-2 "
-								: null
-						} `}
-					>
-						<div>
-							<i class='fa-regular fa-futbol     text-neutral-400 '></i>
+				<div className='flex space-x-2 items-center'>
+					<div className=' space-x-5 hidden lg:flex py-3'>
+						<div className='bg-rose-700 px-4 py-1 rounded-lg '>
+							<Link
+								to='/sport/sports'
+								className='text-xs font-bold text-white  '
+							>
+								Mobile App
+							</Link>
 						</div>
 						<Link
-							to='/sport/sports/sporttables'
-							className={`text-xs font-bold text-neutral-400`}
+							to='/sport/sports/sporttables/soccer'
+							className={` font-bold text-neutral-400`}
 						>
-							Sport
+							<div
+								className={`  py-1 flex  items-center  space-x-2 ${
+									location.pathname.substr(0, 13) === "/sport/sports"
+										? "border-b-orange-500 border-b-2 text-white "
+										: null
+								} `}
+							>
+								<div>
+									<i
+										class={`fa-regular fa-futbol     text-neutral-400 ${
+											location.pathname.substr(0, 13) === "/sport/sports"
+												? "text-orange-500"
+												: null
+										}`}
+									></i>
+								</div>
+								<div className='text-xs'>Sport</div>
+							</div>
 						</Link>
-					</div>
-					<div
-						className={`  py-1 flex items-center space-x-2  ${
-							location.pathname === "/sport/live/livetables"
-								? "border-b-gray-200 border-b-2 "
-								: null
-						} `}
-					>
-						<div>
-							<i class='fa-sharp fa-solid fa-microphone-lines text-neutral-400'></i>
-						</div>
 						<Link
-							to='/sport/live/livetables'
-							className='text-xs font-bold text-neutral-400  '
+							to='/sport/live/livetables/soccer'
+							className=' font-bold text-neutral-400  '
 						>
-							Live
+							<div
+								className={`  py-1 flex items-center space-x-2  ${
+									location.pathname.substr(0, 11) === "/sport/live"
+										? "border-b-orange-500 border-b-2 text-white "
+										: null
+								} `}
+							>
+								<div>
+									<i
+										class={`fa-sharp fa-solid fa-microphone-lines text-neutral-400 ${
+											location.pathname.substr(0, 11) === "/sport/live"
+												? "text-orange-500  "
+												: null
+										}`}
+									></i>
+								</div>
+								<div className='text-xs'>Live</div>
+							</div>
 						</Link>
-					</div>
-
-					<div
-						className={`  py-1 flex items-center  space-x-2 ${
-							location.pathname === "/casino/all"
-								? "border-b-gray-200 border-b-2 "
-								: null
-						} `}
-					>
-						<div>
-							<i class='fa-brands fa-bitcoin   text-neutral-400'></i>
-						</div>
-						<Link
-							to='/casino/all'
-							className='text-xs font-bold text-neutral-400  '
-						>
-							Casino
+						<Link to='/casino/all' className='font-bold text-neutral-400  '>
+							<div
+								className={`  py-1 flex items-center  space-x-2 ${
+									location.pathname.slice(0, 8) === "/casino/"
+										? "border-b-orange-500 border-b-2 text-white "
+										: null
+								} `}
+							>
+								<div>
+									<i
+										class={`fa-brands fa-bitcoin   text-neutral-400 ${
+											location.pathname.slice(0, 8) === "/casino/"
+												? "text-orange-500  "
+												: null
+										} `}
+									></i>
+								</div>
+								<div className='text-xs '>Casino</div>
+							</div>
 						</Link>
-					</div>
-					<div
-						className={`  py-1 flex items-center  space-x-2 ${
-							location.pathname === "/casino-live/all"
-								? "border-b-gray-200 border-b-2 "
-								: null
-						} `}
-					>
-						<div>
-							<i class='fa-sharp fa-solid fa-heart-circle-bolt  text-neutral-400'></i>
-						</div>
 						<Link
 							to='/casino-live/all'
-							className='text-xs font-bold text-neutral-400  '
+							className=' font-bold text-neutral-400  '
 						>
-							Live Casino
-						</Link>
-					</div>
-					<div className='  py-1 flex items-center  space-x-2'>
-						<div>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								viewBox='0 0 24 24'
-								fill='currentColor'
-								class='w-6 h-6 text-neutral-400'
+							<div
+								className={`  py-1 flex items-center  space-x-2 ${
+									location.pathname.slice(0, 12) === "/casino-live"
+										? "border-b-orange-500 border-b-2 text-white "
+										: null
+								} `}
 							>
-								<path d='M9.375 3a1.875 1.875 0 000 3.75h1.875v4.5H3.375A1.875 1.875 0 011.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0112 2.753a3.375 3.375 0 015.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 10-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3zM11.25 12.75H3v6.75a2.25 2.25 0 002.25 2.25h6v-9zM12.75 12.75v9h6.75a2.25 2.25 0 002.25-2.25v-6.75h-9z' />
-							</svg>
-						</div>
+								<div>
+									<i
+										class={`fa-sharp fa-solid fa-heart-circle-bolt  text-neutral-400 ${
+											location.pathname.slice(0, 12) === "/casino-live"
+												? "text-orange-500  "
+												: null
+										}`}
+									></i>
+								</div>
+								<div className='text-xs'>Live Casino</div>
+							</div>
+						</Link>
 						<Link
-							to='/invoices'
+							to='/promotion/all'
 							className='text-xs font-bold text-neutral-400  '
 						>
-							Promo
+							<div
+								className={`  py-1 flex items-center  space-x-2 ${
+									location.pathname.slice(0, 10) === "/promotion"
+										? "border-b-orange-500 border-b-2 text-white "
+										: null
+								} `}
+							>
+								<div>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										viewBox='0 0 24 24'
+										fill='currentColor'
+										class={`w-6 h-6 text-neutral-400 ${
+											location.pathname.slice(0, 10) === "/promotion"
+												? "text-orange-500  "
+												: null
+										}`}
+									>
+										<path d='M9.375 3a1.875 1.875 0 000 3.75h1.875v4.5H3.375A1.875 1.875 0 011.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0112 2.753a3.375 3.375 0 015.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 10-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3zM11.25 12.75H3v6.75a2.25 2.25 0 002.25 2.25h6v-9zM12.75 12.75v9h6.75a2.25 2.25 0 002.25-2.25v-6.75h-9z' />
+									</svg>
+								</div>
+								<div className='text-xs'>Promo</div>
+							</div>
 						</Link>
 					</div>
 
-					<div className='  py-1 '>
-						<Link
-							to='/invoices'
-							className='text-xs font-bold text-neutral-400  '
-						>
-							More
-						</Link>
+					<div className=' lg:hidden py-1 '>
+						<div className='flex'>
+							<div className='relative'>
+								<Menu>
+									<Menu.Button className='rounded-xl px-3 py-1  text-neutral-400'>
+										<div className='flex items-center '>
+											{/* <div>more</div> */}
+											<div className='h-full py-1'>
+												<svg
+													xmlns='http://www.w3.org/2000/svg'
+													viewBox='0 0 24 24'
+													fill='currentColor'
+													class='w-8 h-8 font-bold'
+												>
+													<path
+														fill-rule='evenodd'
+														d='M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z'
+														clip-rule='evenodd'
+													/>
+												</svg>
+											</div>
+										</div>
+									</Menu.Button>
+									<div className='absolute -right-36   w-96  '>
+										<Menu.Items className='grid grid-cols-2 gap-3 text-xs font-bold py-2 px-4 bg-blue-800 rounded-lg'>
+											<Menu.Item>
+												{({ active }) => (
+													<div
+														className={`flex py-1 rounded-xl px-2   ${
+															active && "bg-blue-500 text-white "
+														}`}
+													>
+														<Link
+															to='/sport/sports/sporttables/soccer'
+															className={` font-bold text-neutral-400 w-full`}
+														>
+															<div
+																className={`  py-1 flex  items-center  space-x-2 ${
+																	location.pathname.substr(0, 13) ===
+																	"/sport/sports"
+																		? "border-b-orange-500 border-b-2 text-white "
+																		: null
+																} `}
+															>
+																<div>
+																	<i
+																		class={`fa-regular fa-futbol     text-neutral-400 ${
+																			location.pathname.substr(0, 13) ===
+																			"/sport/sports"
+																				? "text-orange-500"
+																				: null
+																		}`}
+																	></i>
+																</div>
+																<div className='text-xs'>Sport</div>
+															</div>
+														</Link>
+													</div>
+												)}
+											</Menu.Item>
+											<Menu.Item>
+												{({ active }) => (
+													<div
+														className={`flex py-1 rounded-xl px-2    ${
+															active && "bg-blue-500 text-white "
+														}`}
+													>
+														<Link
+															to='/sport/live/livetables/soccer'
+															className=' font-bold text-neutral-400 w-full  '
+														>
+															<div
+																className={`  py-1 flex items-center space-x-2  ${
+																	location.pathname.substr(0, 11) ===
+																	"/sport/live"
+																		? "border-b-orange-500 border-b-2 text-white "
+																		: null
+																} `}
+															>
+																<div>
+																	<i
+																		class={`fa-sharp fa-solid fa-microphone-lines text-neutral-400 ${
+																			location.pathname.substr(0, 11) ===
+																			"/sport/live"
+																				? "text-orange-500  "
+																				: null
+																		}`}
+																	></i>
+																</div>
+																<div className='text-xs'>Live</div>
+															</div>
+														</Link>
+													</div>
+												)}
+											</Menu.Item>
+											<Menu.Item>
+												{({ active }) => (
+													<div
+														className={`flex py-1 rounded-xl px-2    ${
+															active && "bg-blue-500 text-white "
+														}`}
+													>
+														<Link
+															to='/casino/all'
+															className='font-bold text-neutral-400 w-full '
+														>
+															<div
+																className={`  py-1 flex items-center  space-x-2 ${
+																	location.pathname.slice(0, 8) === "/casino/"
+																		? "border-b-orange-500 border-b-2 text-white "
+																		: null
+																} `}
+															>
+																<div>
+																	<i
+																		class={`fa-brands fa-bitcoin   text-neutral-400 ${
+																			location.pathname.slice(0, 8) ===
+																			"/casino/"
+																				? "text-orange-500  "
+																				: null
+																		} `}
+																	></i>
+																</div>
+																<div className='text-xs '>Casino</div>
+															</div>
+														</Link>
+													</div>
+												)}
+											</Menu.Item>
+											<Menu.Item>
+												{({ active }) => (
+													<div
+														className={`flex py-1 rounded-xl px-2    ${
+															active && "bg-blue-500 text-white "
+														}`}
+													>
+														<Link
+															to='/casino-live/all'
+															className=' font-bold text-neutral-400  w-full  '
+														>
+															<div
+																className={`  py-1 flex items-center  space-x-2 ${
+																	location.pathname.slice(0, 12) ===
+																	"/casino-live"
+																		? "border-b-orange-500 border-b-2 text-white "
+																		: null
+																} `}
+															>
+																<div>
+																	<i
+																		class={`fa-sharp fa-solid fa-heart-circle-bolt  text-neutral-400 ${
+																			location.pathname.slice(0, 12) ===
+																			"/casino-live"
+																				? "text-orange-500  "
+																				: null
+																		}`}
+																	></i>
+																</div>
+																<div className='text-xs'>Live Casino</div>
+															</div>
+														</Link>
+													</div>
+												)}
+											</Menu.Item>
+											<Menu.Item>
+												{({ active }) => (
+													<div
+														className={`flex py-1 rounded-xl px-2    ${
+															active && "bg-blue-500 text-white "
+														}`}
+													>
+														<Link
+															to='/promotion/all'
+															className='text-xs font-bold text-neutral-400 w-full  '
+														>
+															<div
+																className={`  py-1 flex items-center  space-x-2 ${
+																	location.pathname.slice(0, 10) ===
+																	"/promotion"
+																		? "border-b-orange-500 border-b-2 text-white "
+																		: null
+																} `}
+															>
+																<div>
+																	<svg
+																		xmlns='http://www.w3.org/2000/svg'
+																		viewBox='0 0 24 24'
+																		fill='currentColor'
+																		class={`w-6 h-6 text-neutral-400 ${
+																			location.pathname.slice(0, 10) ===
+																			"/promotion"
+																				? "text-orange-500  "
+																				: null
+																		}`}
+																	>
+																		<path d='M9.375 3a1.875 1.875 0 000 3.75h1.875v4.5H3.375A1.875 1.875 0 011.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0112 2.753a3.375 3.375 0 015.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 10-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3zM11.25 12.75H3v6.75a2.25 2.25 0 002.25 2.25h6v-9zM12.75 12.75v9h6.75a2.25 2.25 0 002.25-2.25v-6.75h-9z' />
+																	</svg>
+																</div>
+																<div className='text-xs'>Promo</div>
+															</div>
+														</Link>
+													</div>
+												)}
+											</Menu.Item>
+										</Menu.Items>
+									</div>
+								</Menu>
+							</div>
+						</div>
 					</div>
 				</div>
-				{false ? (
+				{true ? (
 					<div className='flex space-x-3 text-white px-10'>
 						<div className='px-3 py-1 bg-blue-800 rounded-xl'>EN</div>
 						<div className='px-3 py-1 bg-blue-800 rounded-xl'>$0</div>
@@ -340,13 +583,111 @@ function Navbar() {
 							</div>
 						</div>
 						<div className='bg-orange-500 px-3 py-1 rounded-3xl'>
-							<Link to='#'>Deposit</Link>
+							<Link to='accountsetting'>Deposit</Link>
 						</div>
 					</div>
 				) : (
 					<div className='flex space-x-2 px-10 text-white font-bold'>
-						<div className='py-1 px-3 bg-lime-600  rounded-xl'>
+						{/* <div className='py-1 px-3 bg-lime-600  rounded-xl'>
 							<Link to='#'>login</Link>
+						</div> */}
+						<div className='flex'>
+							<div className='relative'>
+								<Menu>
+									<Menu.Button className='rounded-xl px-3 py-1 bg-blue-800 text-white'>
+										<div className='flex'>
+											<div className='h-full py-1 font-extrabold'>
+												<svg
+													xmlns='http://www.w3.org/2000/svg'
+													viewBox='0 0 24 24'
+													fill='currentColor'
+													class='w-4 h-4'
+												>
+													<path
+														fill-rule='evenodd'
+														d='M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z'
+														clip-rule='evenodd'
+													/>
+												</svg>
+											</div>
+											<div className='h-full '>login</div>
+										</div>
+									</Menu.Button>
+									<div className='absolute  -right-24 w-64 mt-2'>
+										<Menu.Items className='w-full  pt-10  pb-5  flex flex-col text-xs font-bold  bg-blue-800 rounded-3xl overflow-hidden'>
+											<div className='w-full   '>
+												<form className='w-full space-y-16'>
+													<div className=' w-full px-4  space-y-5 '>
+														{/* <label
+															for='email'
+															className='font-Yanone_Kaffeesatz font-bold  text-xl text-gray-700'
+														>
+															Username
+														</label> */}
+														<div className='flex items-center  overflow-hidden rounded-3xl border-2 border-white '>
+															<div>
+																<svg
+																	xmlns='http://www.w3.org/2000/svg'
+																	viewBox='0 0 24 24'
+																	fill='currentColor'
+																	class='w-6 h-6'
+																>
+																	<path
+																		fill-rule='evenodd'
+																		d='M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z'
+																		clip-rule='evenodd'
+																	/>
+																</svg>
+															</div>
+															<input
+																type='text'
+																id='email'
+																placeholder='Username'
+																className='bg-opacity-20 bg-gray-400  w-full'
+																required
+															></input>
+														</div>
+														<div className='flex items-center  overflow-hidden rounded-3xl border-2 border-white '>
+															<div>
+																<svg
+																	xmlns='http://www.w3.org/2000/svg'
+																	viewBox='0 0 24 24'
+																	fill='currentColor'
+																	class='w-6 h-6'
+																>
+																	<path
+																		fill-rule='evenodd'
+																		d='M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5z'
+																		clip-rule='evenodd'
+																	/>
+																</svg>
+															</div>
+															<input
+																type='password'
+																id='email'
+																placeholder='Password'
+																className='bg-opacity-20 bg-gray-400  w-full'
+																required
+															></input>
+														</div>
+														<div className=''>
+															<button className='w-full bg-slate-400  text-white py-3  rounded-3xl'>
+																login
+															</button>
+														</div>
+														<div className=''>
+															<Link to='#'>forgot your password</Link>
+														</div>
+													</div>
+													<div className='w-full flex justify-center '>
+														<Link to='#'>Register</Link>
+													</div>
+												</form>
+											</div>
+										</Menu.Items>
+									</div>
+								</Menu>
+							</div>
 						</div>
 						<div className='py-1 px-3 bg-orange-600 rounded-xl'>
 							<Link to='#'>Signup</Link>

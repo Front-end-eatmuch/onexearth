@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 function CasinoLiveSideBar() {
 	return (
-		<div className='w-full   '>
-			<div className='w-full pt-10  border-gray-400 border-2 bg-white'>
-				<div className=' w-full text-center  '>CasinoLiveSideBar</div>
+		<div className='w-64 rounded-2xl p-2 bg-white shadow-2xl   '>
+			<div className='w-full pt-10   rounded-2xl bg-white'>
+				<div className=' w-full text-center text-black  '>
+					CasinoLiveSideBar
+				</div>
 				<div className='w-full px-6 pt-10'>
 					<div className='grid grid-cols-2'>
 						<div>
@@ -122,8 +124,10 @@ function CasinoLiveSideBar() {
 						</div>
 					</div>
 				</div>
-				<div className='w-full text-center mt-5 space-y-4'>
-					<div className='text-center py-2 bg-gray-300'>providers</div>
+				<div className='w-full text-center mt-5 space-y-4 px-4'>
+					<div className='text-center py-2 bg-gray-300 rounded-2xl '>
+						providers
+					</div>
 					<div className='grid grid-cols-2 gap-y-2 h-small1 overflow-y-scroll'>
 						<div className='w-32 h-32 bg-slate-400'></div>
 						<div className='w-32 h-32 bg-slate-400'></div>

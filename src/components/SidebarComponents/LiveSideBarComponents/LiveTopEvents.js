@@ -4,17 +4,21 @@ function LiveTopEvents(props) {
 	const [show2, setShow2] = useState(true);
 	return (
 		<div>
-			<div className='w-56  xl:w-[15rem] bg-slate-100  '>
-				<div className='p-4   w-full bg-gray-500 '>
+			<div className='  xl:w-[15rem] bg-slate-100  '>
+				<div className='p-4   w-full bg-indigo-900 text-white '>
 					<button
 						className=' w-full flex  justify-between'
 						onClick={() => {
 							setShow2(!show2);
 						}}
 					>
-						<div className='text-xs font-bold uppercase'>
+						<div className='flex space-x-4 text-xs font-bold uppercase'>
 							<button>Top Events</button>
+							<div className=' px-3 bg-red-600 rounded-xl text-center'>
+								live
+							</div>
 						</div>
+
 						<div>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
