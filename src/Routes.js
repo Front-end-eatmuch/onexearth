@@ -55,13 +55,13 @@ import EredevisieTable from "./container/SportContainer/Leagues/EredevisieTable/
 import SeriesATable from "./container/SportContainer/Leagues/SeriesATable/SeriesATable";
 function Routess() {
 	const routes = useRoutes([
-		{ path: "/", element: <Homepage /> },
+		// { path: "/", element: <Homepage /> },
 		// {
 		// 	path: "login",
 		// 	element: <Login />,
 		// },
 		{
-			path: "/sport",
+			path: "/",
 			element: <Sport />,
 			children: [
 				{

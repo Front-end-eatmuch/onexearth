@@ -1,7 +1,7 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
 import LiveHomeSubTables from "../../../components/SubTables/LiveSubtables/LiveHomeSubTables";
-import LiveSoccerSubTables from "../../../components/SubTables/LiveSubtables/LiveSoccerSubTables ";
+import LiveSoccerSubTables from "../../../components/SubTables/LiveSubtables/LiveSoccerLigueaSubtable/LiveSoccerSubTables ";
 
 function LiveHome() {
 	const { liveTableaus } = useOutletContext();

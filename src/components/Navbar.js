@@ -5,7 +5,7 @@ import { matchRoutes, useLocation } from "react-router";
 function Navbar() {
 	let location = useLocation();
 	// let newlocation = location.pathname.substr(0, 13);
-	console.log(location.pathname.slice(0, 10));
+	console.log(location.pathname.slice(0, 5));
 	console.log();
 	// console.log(location.pathname);
 	return (
@@ -13,7 +13,7 @@ function Navbar() {
 			<div className='flex space-x-5  items-center bg-indigo-900 w-screen justify-between'>
 				<div className='px-5'>
 					<Link
-						to='/sport/live/livetables/home'
+						to='/sports/sporttables/soccer'
 						className='text-xl font-bold text-white  '
 					>
 						OneXearth
@@ -22,20 +22,17 @@ function Navbar() {
 				<div className='flex space-x-2 items-center'>
 					<div className=' space-x-5 hidden lg:flex py-3'>
 						<div className='bg-rose-700 px-4 py-1 rounded-lg '>
-							<Link
-								to='/sport/sports'
-								className='text-xs font-bold text-white  '
-							>
+							<Link to='/sports' className='text-xs font-bold text-white  '>
 								Mobile App
 							</Link>
 						</div>
 						<Link
-							to='/sport/sports/sporttables/soccer'
+							to='/sports/sporttables/soccer'
 							className={` font-bold text-neutral-400`}
 						>
 							<div
 								className={`  py-1 flex  items-center  space-x-2 ${
-									location.pathname.substr(0, 13) === "/sport/sports"
+									location.pathname.substr(0, 7) === "/sports"
 										? "border-b-orange-500 border-b-2 text-white "
 										: null
 								} `}
@@ -43,7 +40,7 @@ function Navbar() {
 								<div>
 									<i
 										class={`fa-regular fa-futbol     text-neutral-400 ${
-											location.pathname.substr(0, 13) === "/sport/sports"
+											location.pathname.substr(0, 7) === "/sports"
 												? "text-orange-500"
 												: null
 										}`}
@@ -53,12 +50,12 @@ function Navbar() {
 							</div>
 						</Link>
 						<Link
-							to='/sport/live/livetables/soccer'
+							to='/live/livetables/soccer'
 							className=' font-bold text-neutral-400  '
 						>
 							<div
 								className={`  py-1 flex items-center space-x-2  ${
-									location.pathname.substr(0, 11) === "/sport/live"
+									location.pathname.substr(0, 5) === "/live"
 										? "border-b-orange-500 border-b-2 text-white "
 										: null
 								} `}
@@ -66,7 +63,7 @@ function Navbar() {
 								<div>
 									<i
 										class={`fa-sharp fa-solid fa-microphone-lines text-neutral-400 ${
-											location.pathname.substr(0, 11) === "/sport/live"
+											location.pathname.substr(0, 5) === "/live"
 												? "text-orange-500  "
 												: null
 										}`}
@@ -181,13 +178,12 @@ function Navbar() {
 														}`}
 													>
 														<Link
-															to='/sport/sports/sporttables/soccer'
+															to='/sports/sporttables/soccer'
 															className={` font-bold text-neutral-400 w-full`}
 														>
 															<div
 																className={`  py-1 flex  items-center  space-x-2 ${
-																	location.pathname.substr(0, 13) ===
-																	"/sport/sports"
+																	location.pathname.substr(0, 13) === "/sports"
 																		? "border-b-orange-500 border-b-2 text-white "
 																		: null
 																} `}
@@ -196,7 +192,7 @@ function Navbar() {
 																	<i
 																		class={`fa-regular fa-futbol     text-neutral-400 ${
 																			location.pathname.substr(0, 13) ===
-																			"/sport/sports"
+																			"/sports"
 																				? "text-orange-500"
 																				: null
 																		}`}
@@ -216,13 +212,12 @@ function Navbar() {
 														}`}
 													>
 														<Link
-															to='/sport/live/livetables/soccer'
+															to='/live/livetables/soccer'
 															className=' font-bold text-neutral-400 w-full  '
 														>
 															<div
 																className={`  py-1 flex items-center space-x-2  ${
-																	location.pathname.substr(0, 11) ===
-																	"/sport/live"
+																	location.pathname.substr(0, 11) === "/live"
 																		? "border-b-orange-500 border-b-2 text-white "
 																		: null
 																} `}
@@ -231,7 +226,7 @@ function Navbar() {
 																	<i
 																		class={`fa-sharp fa-solid fa-microphone-lines text-neutral-400 ${
 																			location.pathname.substr(0, 11) ===
-																			"/sport/live"
+																			"/live"
 																				? "text-orange-500  "
 																				: null
 																		}`}

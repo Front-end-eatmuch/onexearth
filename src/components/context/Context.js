@@ -1,4 +1,4 @@
-import { createContext, useReducer, useEffect } from "react";
+import { createContext, useReducer, useEffect, useState } from "react";
 import Reducer from "./Reducer";
 
 const INITIAL_STATE = {
@@ -6,11 +6,34 @@ const INITIAL_STATE = {
 	isFetching: false,
 	error: false,
 };
+const Another_State = [];
 
 export const Context = createContext(INITIAL_STATE);
 
 export const ContextProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(Reducer, INITIAL_STATE);
+	const [betslip, setBetslip] = useState(Another_State);
+	const betHandler = (value, name, rowid) => {
+		const objy = { value, name, rowid };
+
+		if (betslip.includes(objy)) {
+			setBetslip((current) =>
+				current.filter((element) => {
+					return element !== objy;
+				})
+			);
+		} else {
+			setBetslip([...betslip, objy]);
+			console.log(betslip);
+		}
+	};
+	const deleteBetSlip = (value, name, rowid) => {
+		setBetslip((current) =>
+			current.filter((element) => {
+				return element.rowid !== rowid;
+			})
+		);
+	};
 	useEffect(() => {
 		localStorage.setItem("user", JSON.stringify(state.user));
 	}, [state.user]);
@@ -21,6 +44,9 @@ export const ContextProvider = ({ children }) => {
 				isFetching: state.isFetching,
 				error: state.error,
 				dispatch,
+				betslip,
+				betHandler,
+				deleteBetSlip,
 			}}
 		>
 			{children}

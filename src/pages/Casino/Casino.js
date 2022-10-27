@@ -114,7 +114,7 @@ function Casino() {
 						already have an account login
 					</div>
 				</div>
-				<div className='h-full w-80 rounded-lg bg-opacity-60 bg-gray-300 mr-10 py-4 overflow-y-hidden '>
+				<div className='hidden md:block h-full w-80 rounded-lg bg-opacity-60 bg-gray-300 mr-10 py-4 overflow-y-hidden '>
 					<div className='w-full h-20 text-center bg-gray-100 bg-opacity-50 border-t-2 border-b-2 border-gray-50'>
 						text
 					</div>

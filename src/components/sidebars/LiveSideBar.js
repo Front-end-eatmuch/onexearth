@@ -150,8 +150,8 @@ function LiveSideBar() {
 	const [show, setShow] = useState(false);
 	const [show2, setShow2] = useState(false);
 	return (
-		<div className='w-60'>
-			<div className=' h-full space-y-4 px-2 py-2 overflow-y-scroll bg-slate-200  rounded-xl'>
+		<div className='w-64 px-2 bg-slate-200  rounded-xl '>
+			<div className=' h-full space-y-4  py-2 overflow-y-scroll '>
 				<LiveTopEvents topSportEvents={topLiveEvents} />
 				<LiveSport popularSport={popularSport} games={games} />
 			</div>

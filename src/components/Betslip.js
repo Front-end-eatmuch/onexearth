@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "./context/Context";
 
 function Betslip() {
+	const { betslip, deleteBetSlip } = useContext(Context);
+	// console.log(betslip);
+
 	return (
-		<div className='w-60 xl:w-full '>
-			<div className='h-full  w-60 lg:w-full  bg-slate-200  p-2 space-y-4 rounded-2xl'>
+		<div className='w-80 xl:w-full '>
+			<div className='h-full  w-80 lg:w-full  bg-slate-200  p-2 space-y-4 rounded-2xl'>
 				<div className='px-2 flex space-x-2 py-4 bg-indigo-900 text-white items-center'>
 					<div>
 						<svg
@@ -43,7 +47,43 @@ function Betslip() {
 							</svg>
 						</div>
 					</div>
-					<div className='w-full bg-white h-40'></div>
+					<div
+						className={`w-full space-y-2 bg-white p-2  ${
+							betslip.length === 0 ? "h-40" : "h-full"
+						}`}
+					>
+						{betslip.map((v) => {
+							return (
+								<div className='cursor-pointer  bg-gray-200 text-gray-600 py-2'>
+									<div
+										className='w-full flex justify-end'
+										onClick={() => deleteBetSlip(v.name, v.value, v.rowid)}
+									>
+										<svg
+											xmlns='http://www.w3.org/2000/svg'
+											viewBox='0 0 24 24'
+											fill='currentColor'
+											class='w-4 h-4'
+										>
+											<path
+												fill-rule='evenodd'
+												d='M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z'
+												clip-rule='evenodd'
+											/>
+										</svg>
+									</div>
+									<div className='flex px-4 items-center space-x-2 w-full'>
+										<div>{v.value}</div>
+										<div className='flex flex-col text-sm break-all text-green-600'>
+											{v.name}
+										</div>
+									</div>
+
+									{/* <div className='px-4'>{v.rowid}</div> */}
+								</div>
+							);
+						})}
+					</div>
 					<div className='w-full bg-indigo-900 h-16 rounded-b-xl '></div>
 				</div>
 			</div>

@@ -1,17 +1,20 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
-import LiveSoccerSubTables from "../../../components/SubTables/LiveSubtables/LiveSoccerSubTables ";
-import SoccerSubTables from "../../../components/SubTables/SportSubTable/SoccerSubTables";
+import LiveSoccerSubTables from "../../../components/SubTables/LiveSubtables/LiveSoccerLigueaSubtable/LiveSoccerSubTables ";
+import MoscowChampionship from "../../../components/SubTables/SportSubTable/SportLigueSubTables/MoscowChampionship";
+import PremiereLigue from "../../../components/SubTables/SportSubTable/SportLigueSubTables/PremiereLigue";
+import SoccerSubTables from "../../../components/SubTables/SportSubTable/SportLigueSubTables/SoccerSubTables";
+import PremiereLeagueTable from "../Leagues/PremiereLeagueTable/PremiereLeagueTable";
 import SportTitleBar from "../SportTitleBar/SportTitleBar";
 
 function SoccerTable() {
 	const { sportTableaus } = useOutletContext();
 	return (
-		<div>
-			<div>
-				{sportTableaus.map((t, i) => {
-					return <SoccerSubTables sporttable={t} key={i} />;
-				})}
+		<div className='h-screen'>
+			<div className='h-full'>
+				<SoccerSubTables sporttable={sportTableaus} />
+				<PremiereLigue sporttable={sportTableaus} />
+				<MoscowChampionship sporttable={sportTableaus} />
 			</div>
 		</div>
 	);

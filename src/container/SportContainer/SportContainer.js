@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import SoccerSubTables from "../../components/SubTables/SportSubTable/SoccerSubTables";
+import SoccerSubTables from "../../components/SubTables/SportSubTable/SportLigueSubTables/SoccerSubTables";
 import LiveSoccerTable from "../LiveContainer/LiveSoccerTable/LiveSoccerTable";
 
 import SportTable from "./SoccerTable/SoccerTable";
@@ -10,82 +10,53 @@ import SoccerTable from "./SoccerTable/SoccerTable";
 function SportContainer() {
 	const [sportTableaus, setSportTableaus] = useState([
 		{
-			id: 1,
-			DataTitle: ["Premiere League", "1", "x", "2"],
-			Data: [
-				{
-					id: "_11",
-					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
-					color: "silver",
-					category: "laptop",
-					price: 46,
-				},
-				{
-					id: "_12",
-					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
-					color: "silver",
-					category: "laptop",
-					price: 46,
-				},
-			],
+			laliga: ["realmaadrid ", "bacelona"],
+			rate1: 1.32,
+			rate2: 4.25,
+			rate3: 9.5,
+			rate4: 0,
+			rate5: 1.3,
+			rate6: 1.89,
+			rate7: 0,
+			rate8: 1.97,
 		},
 		{
-			id: 2,
-			DataTitle: ["A League", "1", "x", "2"],
-			Data: [
-				{
-					id: "_21",
-					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
-					color: "silver",
-					category: "laptop",
-					price: 46,
-				},
-			],
+			laliga: ["arsena ", "totenham"],
+			rate1: 1.32,
+			rate2: 4.25,
+			rate3: 9.5,
+			rate4: 4,
+			rate5: 1.3,
+			rate6: 1.89,
+			rate7: 0,
+			rate8: 1.97,
 		},
 		{
-			id: 3,
-			DataTitle: ["Bondes Liga", "1", "x", "2"],
-			Data: [
-				{
-					id: "_31",
-					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
-					color: "silver",
-					category: "laptop",
-					price: 46,
-				},
-				{
-					id: "_32",
-					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
-					color: "silver",
-					category: "laptop",
-					price: 46,
-				},
-			],
+			laliga: ["bayen munich ", "psg"],
+			rate1: 1.32,
+			rate2: 4.25,
+			rate3: 9.5,
+			rate4: 0,
+			rate5: 1.3,
+			rate6: 1.89,
+			rate7: 0,
+			rate8: 1.97,
 		},
 		{
-			id: 4,
-			DataTitle: ["1st Division one", "1", "x", "2"],
-			Data: [
-				{
-					id: "_41",
-					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
-					color: "silver",
-					category: "laptop",
-					price: 46,
-				},
-				{
-					id: "_42",
-					name: { teamone: "realmaadrid", teamtwo: "bacelona" },
-					color: "silver",
-					category: "laptop",
-					price: 46,
-				},
-			],
+			laliga: ["liverpool ", "manchester united"],
+			rate1: 1.32,
+			rate2: 4.25,
+			rate3: 9.5,
+			rate4: 0,
+			rate5: 1.3,
+			rate6: 1.89,
+			rate7: 0,
+			rate8: 1.97,
 		},
 	]);
 	let location = useLocation();
 	return (
-		<div className='px-4'>
+		<div className='px-4 h-screen'>
 			<div></div>
 			<div className='px-4 py-2 flex justify-between bg-indigo-900 text-white'>
 				<div>Sportbets</div>

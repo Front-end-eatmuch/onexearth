@@ -7,7 +7,7 @@ function SportTopChampionship(props) {
 
 	return (
 		<div>
-			<div className='  xl:w-[15rem] bg-slate-100 shadow-xl '>
+			<div className='  bg-slate-100 shadow-xl '>
 				<div className='p-4   w-full bg-indigo-900 text-white '>
 					<button
 						className=' w-full flex  justify-between'

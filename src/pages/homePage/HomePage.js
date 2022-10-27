@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Betslip from "../../components/Betslip";
 import Swipperslide from "../../components/Swipperslide";
-import Livetables from "../../components/SubTables/SportSubTable/SoccerSubTables";
+import Livetables from "../../components/SubTables/SportSubTable/SportLigueSubTables/SoccerSubTables";
 import AdsNlogin from "../../container/AdsNlogin";
 import Livecontainer from "../../container/LiveContainer/LiveContainer";
 import Livesession from "../../container/LiveContainer/LiveSoccerTable/LiveSoccerTable";

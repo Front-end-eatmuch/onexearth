@@ -69,7 +69,7 @@ function PromotionAll() {
 	return (
 		<div className='w-screen'>
 			<div className='w-full flex justify-center items-center '>
-				<div className='grid grid-cols-3 gap-5 py-5'>
+				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-5'>
 					{promoAll.map((v, i) => {
 						return (
 							<div className=' flex flex-col px-2 py-2  bg-slate-200'>

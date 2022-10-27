@@ -7,7 +7,7 @@ import LiveContainer from "../../../container/LiveContainer/LiveContainer";
 function LivePage() {
 	const [open, setOpen] = useState(true);
 	return (
-		<div className='w-full flex h-[45rem]'>
+		<div className='w-full flex h-screen'>
 			{/* the sidebar is generally specific to the page for example the livepage also has its sidebar with data
 			displayed with respect to that page
 			*/}
@@ -32,7 +32,7 @@ function LivePage() {
 				<LiveSideBar />
 			</div>
 			{/* the liveContainer component contain the table for the livepage. live Container also has one. */}
-			<div className='w-full  px-2 h-[45rem]  overflow-y-scroll overflow-x-scroll '>
+			<div className='w-full  px-2 h-screen  overflow-y-scroll overflow-x-scroll '>
 				{/* <LiveContainer /> */}
 				<Outlet />
 				<div>
