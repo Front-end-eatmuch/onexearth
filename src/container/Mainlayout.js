@@ -13,7 +13,7 @@ function Mainlayout() {
 	return (
 		<div className='relative overscroll-none  '>
 			<BrowserRouter>
-				<div className='relative'>
+				<div className='relative h-screen'>
 					<div className='fixed top-0 z-20'>
 						<Navbar />
 					</div>

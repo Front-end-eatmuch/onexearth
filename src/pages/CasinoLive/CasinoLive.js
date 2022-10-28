@@ -168,14 +168,14 @@ function CasinoLive() {
 			</div>
 			<div className='flex  w-screen bg-gray-200  '>
 				<div
-					className={` absolute  z-20 md:hidden duration-200   ${
+					className={` absolute  z-10 md:hidden duration-200   ${
 						open ? "translate-x-0" : "-translate-x-full"
 					}`}
 				>
 					<div className='relative'>
 						<CasinoLiveSideBar />
 						<div
-							className='absolute cursor-pointer top-0 z-40 -right-4  '
+							className='absolute cursor-pointer top-0 z-10 -right-4  '
 							onClick={() => {
 								setOpen(!open);
 							}}

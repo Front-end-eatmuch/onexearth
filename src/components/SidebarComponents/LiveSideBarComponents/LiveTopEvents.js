@@ -4,7 +4,7 @@ function LiveTopEvents(props) {
 	const [show2, setShow2] = useState(true);
 	return (
 		<div>
-			<div className='  xl:w-[15rem] bg-slate-100  '>
+			<div className=' bg-slate-100  '>
 				<div className='p-4   w-full bg-indigo-900 text-white '>
 					<button
 						className=' w-full flex  justify-between'

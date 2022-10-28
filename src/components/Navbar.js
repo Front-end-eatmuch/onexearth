@@ -10,7 +10,7 @@ function Navbar() {
 	// console.log(location.pathname);
 	return (
 		<div className=''>
-			<div className='flex space-x-5  items-center bg-indigo-900 w-screen justify-between'>
+			<div className='flex   items-center bg-indigo-900 w-screen justify-between'>
 				<div className='px-5'>
 					<Link
 						to='/sports/sporttables/soccer'
@@ -19,9 +19,9 @@ function Navbar() {
 						OneXearth
 					</Link>
 				</div>
-				<div className='flex space-x-2 items-center'>
-					<div className=' space-x-5 hidden lg:flex py-3'>
-						<div className='bg-rose-700 px-4 py-1 rounded-lg '>
+				<div className='flex  items-center justify-end'>
+					<div className=' space-x-3 hidden lg:flex py-3'>
+						<div className='bg-rose-700 px-2 py-1 rounded-lg '>
 							<Link to='/sports' className='text-xs font-bold text-white  '>
 								Mobile App
 							</Link>
@@ -168,7 +168,7 @@ function Navbar() {
 											</div>
 										</div>
 									</Menu.Button>
-									<div className='absolute -right-36   w-96  '>
+									<div className='absolute -right-48 w-72   md:w-96  '>
 										<Menu.Items className='grid grid-cols-2 gap-3 text-xs font-bold py-2 px-4 bg-blue-800 rounded-lg'>
 											<Menu.Item>
 												{({ active }) => (
@@ -356,8 +356,6 @@ function Navbar() {
 				</div>
 				{true ? (
 					<div className='flex space-x-3 text-white px-10'>
-						<div className='px-3 py-1 bg-blue-800 rounded-xl'>EN</div>
-						<div className='px-3 py-1 bg-blue-800 rounded-xl'>$0</div>
 						<div className='flex'>
 							<div className='relative'>
 								<Menu>

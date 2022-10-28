@@ -28,7 +28,7 @@ function LivePage() {
 					</div>
 				</div>
 			</div>
-			<div className='hidden md:flex '>
+			<div className='h-screen hidden md:flex '>
 				<LiveSideBar />
 			</div>
 			{/* the liveContainer component contain the table for the livepage. live Container also has one. */}
