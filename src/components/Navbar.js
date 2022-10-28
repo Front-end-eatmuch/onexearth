@@ -13,7 +13,7 @@ function Navbar() {
 			<div className='flex   items-center bg-indigo-900 w-screen justify-between'>
 				<div className='px-5'>
 					<Link
-						to='/sports/sporttables/soccer'
+						to='/live/livetables/home'
 						className='text-xl font-bold text-white  '
 					>
 						OneXearth

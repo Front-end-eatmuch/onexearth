@@ -4,7 +4,7 @@ function LiveSport() {
 	const [show1, setShow1] = useState(true);
 	const [show2, setShow2] = useState(true);
 	return (
-		<div>
+		<div className='w-full'>
 			{" "}
 			<div className='p-4   w-full bg-indigo-900 text-white '>
 				<button

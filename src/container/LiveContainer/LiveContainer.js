@@ -58,7 +58,7 @@ function LiveContainer() {
 	let location = useLocation();
 	return (
 		<div className='px-4'>
-			{location.pathname === "/sport/live/livetables/home" && (
+			{location.pathname === "/live/livetables/home" && (
 				<div className='mb-4'>
 					<LiveHomeSlidder />
 				</div>

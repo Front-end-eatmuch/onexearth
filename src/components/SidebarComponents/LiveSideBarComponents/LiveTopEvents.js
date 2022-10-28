@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function LiveTopEvents(props) {
 	const [show2, setShow2] = useState(true);
 	return (
-		<div>
+		<div className='w-full'>
 			<div className=' bg-slate-100  '>
 				<div className='p-4   w-full bg-indigo-900 text-white '>
 					<button
@@ -12,9 +12,9 @@ function LiveTopEvents(props) {
 							setShow2(!show2);
 						}}
 					>
-						<div className='flex space-x-4 text-xs font-bold uppercase'>
-							<button>Top Events</button>
-							<div className=' px-3 bg-red-600 rounded-xl text-center'>
+						<div className='flex space-x-2 text-xs font-bold uppercase'>
+							<button className='lg:font-bold'>Top Events</button>
+							<div className=' px-2 lg:px-2 bg-red-600 rounded-xl text-center'>
 								live
 							</div>
 						</div>
@@ -26,7 +26,7 @@ function LiveTopEvents(props) {
 								viewBox='0 0 24 24'
 								stroke-width='1.5'
 								stroke='currentColor'
-								class={`w-4 h-4 ${show2 && "rotate-180"}`}
+								class={`lg:w-4 lg:h-4 w-3 h-3 ${show2 && "rotate-180"}`}
 							>
 								<path
 									stroke-linecap='round'

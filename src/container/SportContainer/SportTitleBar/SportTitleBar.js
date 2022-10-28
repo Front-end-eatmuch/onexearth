@@ -16,7 +16,7 @@ function SportTitleBar() {
 					<Link
 						to='volleyball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/sports/sporttables/volleyball" &&
+							location.pathname === "/sports/sporttables/volleyball" &&
 							"text-green-500"
 						}`}
 					>
@@ -27,7 +27,7 @@ function SportTitleBar() {
 					<Link
 						to='soccer'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/sports/sporttables/soccer" &&
+							location.pathname === "/sports/sporttables/soccer" &&
 							"text-green-500"
 						}`}
 					>
@@ -38,7 +38,7 @@ function SportTitleBar() {
 					<Link
 						to='basketball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/sports/sporttables/basketball" &&
+							location.pathname === "/sports/sporttables/basketball" &&
 							"text-green-500"
 						}`}
 					>
@@ -49,7 +49,7 @@ function SportTitleBar() {
 					<Link
 						to='cricket'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/sports/sporttables/cricket" &&
+							location.pathname === "/sports/sporttables/cricket" &&
 							"text-green-500"
 						}`}
 					>
@@ -60,7 +60,7 @@ function SportTitleBar() {
 					<Link
 						to='baseball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/sports/sporttables/baseball" &&
+							location.pathname === "/sports/sporttables/baseball" &&
 							"text-green-500"
 						}`}
 					>
@@ -71,7 +71,7 @@ function SportTitleBar() {
 					<Link
 						to='tennisball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/sports/sporttables/tennisball" &&
+							location.pathname === "/sports/sporttables/tennisball" &&
 							"text-green-500"
 						}`}
 					>

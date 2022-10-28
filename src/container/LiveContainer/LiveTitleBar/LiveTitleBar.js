@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 function LiveTitleBar() {
 	const location = useLocation();
-	
+
 	return (
 		<div>
 			<div className=' flex space-x-10  py-2 w-full px-4'>
@@ -11,7 +11,7 @@ function LiveTitleBar() {
 					<Link
 						to='volleyball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/live/livetables/volleyball" &&
+							location.pathname === "/live/livetables/volleyball" &&
 							"text-green-500"
 						}`}
 					>
@@ -22,7 +22,7 @@ function LiveTitleBar() {
 					<Link
 						to='soccer'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/live/livetables/soccer" &&
+							location.pathname === "/live/livetables/soccer" &&
 							"text-green-500"
 						}`}
 					>
@@ -33,7 +33,7 @@ function LiveTitleBar() {
 					<Link
 						to='basketball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/live/livetables/basketball" &&
+							location.pathname === "/live/livetables/basketball" &&
 							"text-green-500"
 						}`}
 					>
@@ -44,7 +44,7 @@ function LiveTitleBar() {
 					<Link
 						to='cricket'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/live/livetables/cricket" &&
+							location.pathname === "/live/livetables/cricket" &&
 							"text-green-500"
 						}`}
 					>
@@ -55,7 +55,7 @@ function LiveTitleBar() {
 					<Link
 						to='baseball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/live/livetables/baseball" &&
+							location.pathname === "/live/livetables/baseball" &&
 							"text-green-500"
 						}`}
 					>
@@ -66,7 +66,7 @@ function LiveTitleBar() {
 					<Link
 						to='tennisball'
 						className={`text-xs font-bold text-black ${
-							location.pathname === "/sport/live/livetables/tennisball" &&
+							location.pathname === "/live/livetables/tennisball" &&
 							"text-green-500"
 						}`}
 					>
