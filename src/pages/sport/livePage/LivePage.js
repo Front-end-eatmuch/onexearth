@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../../../components/Footer";
 import LiveSideBar from "../../../components/sidebars/LiveSideBar";
-import LiveContainer from "../../../container/LiveContainer/LiveContainer";
+import LiveContainer from "./LiveMixedTable/LiveContainer";
 
 function LivePage() {
 	const [open, setOpen] = useState(true);

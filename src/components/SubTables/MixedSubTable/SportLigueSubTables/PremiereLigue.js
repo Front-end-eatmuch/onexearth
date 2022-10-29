@@ -2,9 +2,8 @@ import { columnSelected } from "@syncfusion/ej2-react-grids";
 import React, { useContext, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRowSelect, useTable } from "react-table";
-import { Context } from "../../../context/Context";
-
-function EredesvisieSubTable(props) {
+import { Context } from "../../../../context/Context";
+function PremiereLigue(props) {
 	const { betHandler } = useContext(Context);
 	const [dic, setDic] = useState([{ book: "book" }]);
 	const [blue, setBlue] = useState();
@@ -13,10 +12,10 @@ function EredesvisieSubTable(props) {
 		{ name: "bob", age: 20 },
 	]);
 	const handleclick = () => {};
-
+	const beet = props.livetable;
 	const COLUMN = [
 		{
-			Header: "LaLiga",
+			Header: "PremiereLigue",
 			accessor: "laliga",
 		},
 		{
@@ -49,7 +48,7 @@ function EredesvisieSubTable(props) {
 		},
 	];
 	const columns = useMemo(() => COLUMN, []);
-	const data = useMemo(() => props.laligaTableaus, []);
+	const data = useMemo(() => props.sporttable, []);
 
 	const {
 		getTableProps,
@@ -75,7 +74,7 @@ function EredesvisieSubTable(props) {
 						{...getTableProps()}
 						class=' w-full text-sm text-left text-gray-800'
 					>
-						{props.laligaTableaus.length !== 0 && (
+						{props.sporttable.length !== 0 && (
 							<thead class='w-full text-start   text-xs text-gray-500 uppercase bg-gray-200  '>
 								{headerGroups.map((headerGroup) => (
 									<tr
@@ -144,4 +143,4 @@ function EredesvisieSubTable(props) {
 	);
 }
 
-export default EredesvisieSubTable;
+export default PremiereLigue;

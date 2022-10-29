@@ -2,8 +2,8 @@ import * as React from "react";
 import Homepage from "./pages/homePage/HomePage";
 import { useRoutes } from "react-router-dom";
 import Login from "./pages/loginPage/Login";
-import LiveContainer from "./container/LiveContainer/LiveContainer";
-import SportContainer from "./container/SportContainer/SportContainer";
+import LiveContainer from "./pages/sport/livePage/LiveMixedTable/LiveContainer";
+import SportContainer from "./pages/sport/sportPage/MixedTable/SportContainer";
 import Sport from "./pages/sport/Sport";
 import SportPage from "./pages/sport/sportPage/SportPage";
 import LivePage from "./pages/sport/livePage/LivePage";
@@ -41,18 +41,18 @@ import AsPersonalDetails from "./pages/AccountSetting/AsPersonalDetails/AsPerson
 import AsPreferences from "./pages/AccountSetting/AsPreferences/AsPreferences";
 import AsTransactionHistory from "./pages/AccountSetting/AsTransactionHistory/AsTransactionHistory";
 import AsWithdraw from "./pages/AccountSetting/AsWithdraw/AsWithdraw";
-import LiveTable from "./container/LiveContainer/LiveSoccerTable/LiveSoccerTable";
-import SoccerTable from "./container/SportContainer/SoccerTable/SoccerTable";
-import LiveSoccerTable from "./container/LiveContainer/LiveSoccerTable/LiveSoccerTable";
-import LiveHome from "./container/LiveContainer/LiveHome/LiveHome";
-import LiveVolleyballSubTables from "./components/SubTables/LiveSubtables/LiveVolleyballSubTables";
-import LaLigaTable from "./container/SportContainer/Leagues/LaLigaTable/LaLigaTable";
-import PremiereLeagueTable from "./container/SportContainer/Leagues/PremiereLeagueTable/PremiereLeagueTable";
+import LiveTable from "./pages/sport/livePage/LiveMixedTable/LiveSoccerTable/LiveSoccerTable";
+import SoccerTable from "./pages/sport/sportPage/MixedTable/SoccerTable/SoccerTable";
+import LiveSoccerTable from "./pages/sport/livePage/LiveMixedTable/LiveSoccerTable/LiveSoccerTable";
+import LiveHome from "./pages/sport/livePage/LiveMixedTable/LiveHome/LiveHome";
+import LiveVolleyballSubTables from "./components/SubTables/LiveMixedSubtables/LiveVolleyballSubTables";
+import LaLigaTable from "./pages/sport/sportPage/LeaguesTable/LaLigaTable/LaLigaTable";
+import PremiereLeagueTable from "./pages/sport/sportPage/LeaguesTable/PremiereLeagueTable/PremiereLeagueTable";
 
-import Ligue1Table from "./container/SportContainer/Leagues/Ligue1Table/Ligue1Table";
-import BundesligaTable from "./container/SportContainer/Leagues/BundesligaTable/BundesligaTable";
-import EredevisieTable from "./container/SportContainer/Leagues/EredevisieTable/EredevisieTable";
-import SeriesATable from "./container/SportContainer/Leagues/SeriesATable/SeriesATable";
+import Ligue1Table from "./pages/sport/sportPage/LeaguesTable/Ligue1Table/Ligue1Table";
+import BundesligaTable from "./pages/sport/sportPage/LeaguesTable/BundesligaTable/BundesligaTable";
+import EredevisieTable from "./pages/sport/sportPage/LeaguesTable/EredevisieTable/EredevisieTable";
+import SeriesATable from "./pages/sport/sportPage/LeaguesTable/SeriesATable/SeriesATable";
 function Routess() {
 	const routes = useRoutes([
 		// { path: "/", element: <Homepage /> },
@@ -96,31 +96,35 @@ function Routess() {
 									path: "tennisball",
 									element: <SoccerTable />,
 								},
-								{
-									path: "Laliga",
-									element: <LaLigaTable />,
-								},
-								{
-									path: "premiereleague",
-									element: <PremiereLeagueTable />,
-								},
-								{
-									path: "seriesa",
-									element: <SeriesATable />,
-								},
-								{
-									path: "ligue1",
-									element: <Ligue1Table />,
-								},
-								{
-									path: "bundesliga",
-									element: <BundesligaTable />,
-								},
-								{
-									path: "eredevisie",
-									element: <EredevisieTable />,
-								},
 							],
+						},
+						{
+							path: "Laliga",
+							element: <LaLigaTable />,
+						},
+						{
+							path: "premieraleague",
+							element: <PremiereLeagueTable />,
+						},
+						{
+							path: "premiereleague",
+							element: <PremiereLeagueTable />,
+						},
+						{
+							path: "seriesa",
+							element: <SeriesATable />,
+						},
+						{
+							path: "ligue1",
+							element: <Ligue1Table />,
+						},
+						{
+							path: "bundesliga",
+							element: <BundesligaTable />,
+						},
+						{
+							path: "eredevisie",
+							element: <EredevisieTable />,
 						},
 					],
 				},

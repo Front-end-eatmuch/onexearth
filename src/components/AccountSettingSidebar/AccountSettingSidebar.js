@@ -304,6 +304,7 @@ function AccountSettingSidebar() {
 						</div>
 					</div>
 				)}
+				<div className='h-96'></div>
 			</div>
 		</div>
 	);

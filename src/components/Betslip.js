@@ -1,9 +1,14 @@
-import React, { useContext } from "react";
-import { Context } from "./context/Context";
+import React, { useContext, useState } from "react";
+import { Context } from "../context/Context";
 
 function Betslip() {
-	const { betslip, deleteBetSlip } = useContext(Context);
+	const { betslip, deleteBetSlip, deleteAllBetSlip } = useContext(Context);
+	const [sure, setSure] = useState(false);
 	// console.log(betslip);
+	const sureHandler = () => {
+		deleteAllBetSlip();
+		setSure(false);
+	};
 
 	return (
 		<div className='w-80 xl:w-full '>
@@ -27,12 +32,47 @@ function Betslip() {
 						<button>SETTINGS</button>
 					</div>
 				</div>
-				<div>
+				<div className='relative'>
+					{sure && (
+						<div className='absolute right-0 top-0 bottom-0 left-0 bg-opacity-90 bg-slate-400'>
+							<div className='w-full h-full flex  justify-center items-center  '>
+								<div className='w-full bg-white space-y-2 py-5 rounded-md '>
+									<div className='w-full text-center font-extrabold'>
+										Delete all outcomes
+									</div>
+									<div className='text-xs text-center text-gray-600'>
+										do you really want to delete all outcome
+									</div>
+									<div className='w-full flex justify-between px-5'>
+										<button
+											className=' px-5 rounded-2xl bg-green-400'
+											onClick={sureHandler}
+										>
+											yes
+										</button>
+										<button
+											className='py-1 px-4 border-2 rounded-2xl border-black'
+											onClick={() => {
+												setSure(false);
+											}}
+										>
+											no
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					)}
 					<div className='px-2 flex space-x-2 py-4 bg-indigo-900 text-white items-center justify-between'>
 						<div className='font-bold text-xs'>
 							<button>Bet Slip</button>
 						</div>
-						<div>
+						<div
+							className='cursor-pointer'
+							onClick={() => {
+								setSure(!sure);
+							}}
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 24 24'
@@ -54,29 +94,31 @@ function Betslip() {
 					>
 						{betslip.map((v) => {
 							return (
-								<div className='cursor-pointer  bg-gray-200 text-gray-600 py-2'>
+								<div className='cursor-pointer  bg-teal-200 text-gray-600 py-2 px-2'>
 									<div
 										className='w-full flex justify-end'
 										onClick={() => deleteBetSlip(v.name, v.value, v.rowid)}
 									>
-										<svg
-											xmlns='http://www.w3.org/2000/svg'
-											viewBox='0 0 24 24'
-											fill='currentColor'
-											class='w-4 h-4'
-										>
-											<path
-												fill-rule='evenodd'
-												d='M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z'
-												clip-rule='evenodd'
-											/>
-										</svg>
+										<div className=' bg-cyan-400 '>
+											<svg
+												xmlns='http://www.w3.org/2000/svg'
+												viewBox='0 0 24 24'
+												fill='currentColor'
+												class='w-4 h-4'
+											>
+												<path
+													fill-rule='evenodd'
+													d='M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z'
+													clip-rule='evenodd'
+												/>
+											</svg>
+										</div>
 									</div>
 									<div className='flex px-4 items-center space-x-2 w-full'>
-										<div>{v.value}</div>
 										<div className='flex flex-col text-sm break-all text-green-600'>
 											{v.name}
 										</div>
+										<div className='text-sm'>{v.value}</div>
 									</div>
 
 									{/* <div className='px-4'>{v.rowid}</div> */}

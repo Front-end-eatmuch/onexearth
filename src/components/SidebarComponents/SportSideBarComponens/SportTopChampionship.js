@@ -48,10 +48,9 @@ function SportTopChampionship(props) {
 
 								<div>
 									<Link
-										to='/sport/sports/sporttables/laliga'
+										to='/sports/laliga'
 										className={`text-xs font-bold text-black ${
-											location.pathname ===
-												"/sport/sports/sporttables/laliga" && "text-green-500"
+											location.pathname === "/sports/laliga" && "text-green-500"
 										}`}
 									>
 										La Liga
@@ -67,10 +66,9 @@ function SportTopChampionship(props) {
 
 								<div>
 									<Link
-										to='/sport/sports/sporttables/premiereleague'
+										to='/sports/premiereleague'
 										className={`text-xs font-bold text-black ${
-											location.pathname ===
-												"/sport/sports/sporttables/premiereleague" &&
+											location.pathname === "/sports/premiereleague" &&
 											"text-green-500"
 										}`}
 									>
@@ -87,10 +85,10 @@ function SportTopChampionship(props) {
 
 								<div>
 									<Link
-										to='/sport/sports/sporttables/seriesa'
+										to='/sports/seriesa'
 										className={`text-xs font-bold text-black ${
-											location.pathname ===
-												"/sport/sports/sporttables/seriesa" && "text-green-500"
+											location.pathname === "/sports/seriesa" &&
+											"text-green-500"
 										}`}
 									>
 										Series A
@@ -106,10 +104,9 @@ function SportTopChampionship(props) {
 
 								<div>
 									<Link
-										to='/sport/sports/sporttables/ligue1'
+										to='/sports/ligue1'
 										className={`text-xs font-bold text-black ${
-											location.pathname ===
-												"/sport/sports/sporttables/ligue1" && "text-green-500"
+											location.pathname === "/sports/ligue1" && "text-green-500"
 										}`}
 									>
 										Ligue 1
@@ -125,10 +122,9 @@ function SportTopChampionship(props) {
 
 								<div>
 									<Link
-										to='#'
+										to='/sports/premieraleague'
 										className={`text-xs font-bold text-black ${
-											location.pathname ===
-												"/sport/sports/sporttables/premieraliga" &&
+											location.pathname === "/sports/premieraleague" &&
 											"text-green-500"
 										}`}
 									>
@@ -145,10 +141,9 @@ function SportTopChampionship(props) {
 
 								<div>
 									<Link
-										to='/sport/sports/sporttables/bundesliga'
+										to='/sports/bundesliga'
 										className={`text-xs font-bold text-black ${
-											location.pathname ===
-												"/sport/sports/sporttables/bundesliga" &&
+											location.pathname === "/sports/bundesliga" &&
 											"text-green-500"
 										}`}
 									>
@@ -165,10 +160,9 @@ function SportTopChampionship(props) {
 
 								<div>
 									<Link
-										to='/sport/sports/sporttables/eredevisie'
+										to='/sports/eredevisie'
 										className={`text-xs font-bold text-black ${
-											location.pathname ===
-												"/sport/sports/sporttables/eredevisie" &&
+											location.pathname === "/sports/eredevisie" &&
 											"text-green-500"
 										}`}
 									>

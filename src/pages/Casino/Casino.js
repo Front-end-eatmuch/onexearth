@@ -95,10 +95,34 @@ function Casino() {
 				},
 			],
 		},
+		{
+			id: 8,
+			DataTitle: ["indian", "color", "category", "price"],
+			Data: [
+				{
+					name: "Samsung",
+					color: "silver",
+					category: "laptop",
+					price: 46,
+				},
+			],
+		},
+		{
+			id: 9,
+			DataTitle: ["indian", "color", "category", "price"],
+			Data: [
+				{
+					name: "Samsung",
+					color: "silver",
+					category: "laptop",
+					price: 46,
+				},
+			],
+		},
 	]);
 	return (
 		<div className=' w-screen  overflow-x-scroll'>
-			<div className='w-screen py-2 flex items-center justify-between h-small2 bg-rose-700 bg-[url("https://cdn.pixabay.com/photo/2014/07/04/19/15/man-384178_1280.jpg")]'>
+			<div className='w-screen py-2 flex items-center justify-between h-small2 bg-rose-700 bg-[url("https://media.gettyimages.com/photos/webcam-girl-ashley-esper-television-personality-and-adult-film-and-picture-id506268874?s=2048x2048")] '>
 				<div className='ml-10 h-full space-y-4 bg-transparent bg-opacity-50 items-center  w-small2 flex flex-col justify-center  bg-indigo-600 rounded-xl'>
 					<h1 className='text-lg text-white font-bold'>WELCOME BONUS</h1>
 					<h1 className='text-4xl font-bold text-lime-300'>
@@ -129,7 +153,7 @@ function Casino() {
 					</div>
 				</div>
 			</div>
-			<div className='flex  w-screen bg-gray-200  '>
+			<div className='flex  w-screen bg-gray-800  '>
 				<div
 					className={` absolute  z-20 md:hidden duration-200   ${
 						open ? "translate-x-0" : "-translate-x-full"

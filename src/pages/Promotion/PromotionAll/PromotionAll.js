@@ -78,8 +78,8 @@ function PromotionAll() {
 								</div>
 								<div className='px-1 relative  '>
 									<div className=' py-10 flex flex-col items-center w-full bg-white shadow-lg -translate-y-5 z-20 space-y-5   '>
-										<div className='absolute -top-4 p-2 rounded-full bg-slate-400'>
-											<i class='fa-sharp fa-solid fa-futbol text-5xl'></i>
+										<div className='absolute -top-4 p-2 rounded-full bg-white'>
+											<i class='fa-sharp fa-solid fa-futbol text-5xl text-green-400'></i>
 										</div>
 										<div className='flex  flex-col items-center justify-center'>
 											<div>{v.Title}</div>

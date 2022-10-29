@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Betslip from "../../components/Betslip";
 import Swipperslide from "../../components/Swipperslide";
-import Livetables from "../../components/SubTables/SportSubTable/SportLigueSubTables/SoccerSubTables";
+import Livetables from "../../components/SubTables/MixedSubTable/SportLigueSubTables/SoccerSubTables";
 import AdsNlogin from "../../container/AdsNlogin";
-import Livecontainer from "../../container/LiveContainer/LiveContainer";
-import Livesession from "../../container/LiveContainer/LiveSoccerTable/LiveSoccerTable";
+import Livecontainer from "../sport/livePage/LiveMixedTable/LiveContainer";
+import Livesession from "../sport/livePage/LiveMixedTable/LiveSoccerTable/LiveSoccerTable";
 import Footer from "../../components/Footer";
-import SportContainer from "../../container/SportContainer/SportContainer";
+import SportContainer from "../sport/sportPage/MixedTable/SportContainer";
 
 function HomePage() {
 	const [open, setOpen] = useState(true);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../../../components/Footer";
 import SportSideBar from "../../../components/sidebars/SportSideBar";
-import SportContainer from "../../../container/SportContainer/SportContainer";
+import SportContainer from "./MixedTable/SportContainer";
 
 function SportPage() {
 	const [open, setOpen] = useState(true);

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function CasinoLiveSideBar() {
 	return (
-		<div className='w-64 rounded-2xl p-2 bg-white shadow-2xl   '>
-			<div className='w-full pt-10   rounded-2xl bg-white'>
+		<div className='w-64 rounded-2xl p-2 bg-gray-600 shadow-2xl   '>
+			<div className='w-full pt-10   '>
 				<div className=' w-full text-center text-black  '>
 					CasinoLiveSideBar
 				</div>

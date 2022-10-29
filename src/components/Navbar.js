@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Menu } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { matchRoutes, useLocation } from "react-router";
+import { Context } from "../context/Context";
 function Navbar() {
 	let location = useLocation();
+	const { signupOpenHandler } = useContext(Context);
+
 	// let newlocation = location.pathname.substr(0, 13);
 	console.log(location.pathname.slice(0, 5));
 	console.log();
@@ -354,7 +357,7 @@ function Navbar() {
 						</div>
 					</div>
 				</div>
-				{true ? (
+				{false ? (
 					<div className='flex space-x-3 text-white px-10'>
 						<div className='flex'>
 							<div className='relative'>
@@ -576,7 +579,7 @@ function Navbar() {
 							</div>
 						</div>
 						<div className='bg-orange-500 px-3 py-1 rounded-3xl'>
-							<Link to='accountsetting'>Deposit</Link>
+							<Link to='accountsetting/deposit'>Deposit</Link>
 						</div>
 					</div>
 				) : (
@@ -683,7 +686,7 @@ function Navbar() {
 							</div>
 						</div>
 						<div className='py-1 px-3 bg-orange-600 rounded-xl'>
-							<Link to='#'>Signup</Link>
+							<button onClick={signupOpenHandler}>Signup</button>
 						</div>
 					</div>
 				)}

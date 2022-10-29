@@ -2,9 +2,9 @@ import { columnSelected } from "@syncfusion/ej2-react-grids";
 import React, { useContext, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRowSelect, useTable } from "react-table";
-import { Context } from "../../../context/Context";
+import { Context } from "../../../../context/Context";
 
-function EredesvisieSubTable(props) {
+function LiveFaCupSubtable(props) {
 	const { betHandler } = useContext(Context);
 	const [dic, setDic] = useState([{ book: "book" }]);
 	const [blue, setBlue] = useState();
@@ -13,10 +13,10 @@ function EredesvisieSubTable(props) {
 		{ name: "bob", age: 20 },
 	]);
 	const handleclick = () => {};
-
+	const beet = props.livetable;
 	const COLUMN = [
 		{
-			Header: "LaLiga",
+			Header: "FA CUP",
 			accessor: "laliga",
 		},
 		{
@@ -49,7 +49,7 @@ function EredesvisieSubTable(props) {
 		},
 	];
 	const columns = useMemo(() => COLUMN, []);
-	const data = useMemo(() => props.laligaTableaus, []);
+	const data = useMemo(() => props.livetable, []);
 
 	const {
 		getTableProps,
@@ -68,35 +68,33 @@ function EredesvisieSubTable(props) {
 	);
 
 	return (
-		<div className='w-full'>
+		<div className=''>
 			<div className='w-full bg-slate-500 '>
 				<div class='w-full  relative shadow-md  '>
 					<table
 						{...getTableProps()}
 						class=' w-full text-sm text-left text-gray-800'
 					>
-						{props.laligaTableaus.length !== 0 && (
-							<thead class='w-full text-start   text-xs text-gray-500 uppercase bg-gray-200  '>
-								{headerGroups.map((headerGroup) => (
-									<tr
-										{...headerGroup.getHeaderGroupProps()}
-										className='w-full bg-gray-100  '
-									>
-										{headerGroup.headers.map((column) => (
-											<th
-												{...column.getHeaderProps()}
-												scope='col '
-												class='text-start w-1/12   py-2  '
-											>
-												<div className=' w-full break-all text-center  '>
-													{column.render("Header")}
-												</div>
-											</th>
-										))}
-									</tr>
-								))}
-							</thead>
-						)}
+						<thead class='w-full text-start   text-xs text-gray-500 uppercase bg-gray-200  '>
+							{headerGroups.map((headerGroup) => (
+								<tr
+									{...headerGroup.getHeaderGroupProps()}
+									className='w-full bg-gray-100  '
+								>
+									{headerGroup.headers.map((column) => (
+										<th
+											{...column.getHeaderProps()}
+											scope='col '
+											class='text-start   py-2 '
+										>
+											<div className=' w-full whitespace-normal text-center  '>
+												{column.render("Header")}
+											</div>
+										</th>
+									))}
+								</tr>
+							))}
+						</thead>
 						<tbody {...getTableBodyProps()}>
 							{rows.map((row) => {
 								prepareRow(row);
@@ -123,11 +121,11 @@ function EredesvisieSubTable(props) {
 																		row.id
 																	)
 													}
-													class={` border-r-2 !w-1/12 hover:bg-slate-100 ${
+													class={` border-r-2 w-1/12 hover:bg-slate-100 ${
 														cell.value == blue && row.id ? null : null
 													}`}
 												>
-													<div className='!w-full h-full whitespace-normal'>
+													<div className='w-full h-full whitespace-normal'>
 														{cell.render("Cell")}
 													</div>
 												</td>
@@ -144,4 +142,4 @@ function EredesvisieSubTable(props) {
 	);
 }
 
-export default EredesvisieSubTable;
+export default LiveFaCupSubtable;
