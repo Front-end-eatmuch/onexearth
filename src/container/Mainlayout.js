@@ -26,7 +26,10 @@ function Mainlayout() {
 					{signupOpen && (
 						<div className='-mt-14 absolute top-0 right-0 bottom-0 left-0  bg-neutral-500 bg-opacity-70  z-30'>
 							<div className=' w-full h-full flex justify-center pt-36'>
-								<div className='bg-white h-fit py-10  w-big px-10 flex items-center relative'>
+								<div className='bg-white h-fit py-10  w-big px-10 flex flex-col justify-center relative'>
+									<div className='w-full text-center py-4 text-xl font-bold text-blue-500'>
+										Register
+									</div>
 									<div
 										className='absolute -right-7 -top-7 cursor-pointer'
 										onClick={signupOpenHandler}

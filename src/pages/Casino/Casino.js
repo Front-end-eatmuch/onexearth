@@ -122,7 +122,7 @@ function Casino() {
 	]);
 	return (
 		<div className=' w-screen  overflow-x-scroll'>
-			<div className='w-screen py-2 flex items-center justify-between h-small2 bg-rose-700 bg-[url("https://media.gettyimages.com/photos/webcam-girl-ashley-esper-television-personality-and-adult-film-and-picture-id506268874?s=2048x2048")] '>
+			<div className='w-screen py-2 flex items-center justify-between h-small2 bg-rose-700 bg-[url("https://media.gettyimages.com/photos/webcam-girl-ashley-esper-television-personality-and-adult-film-and-picture-id506268874?s=2048x2048")] bg-contain '>
 				<div className='ml-10 h-full space-y-4 bg-transparent bg-opacity-50 items-center  w-small2 flex flex-col justify-center  bg-indigo-600 rounded-xl'>
 					<h1 className='text-lg text-white font-bold'>WELCOME BONUS</h1>
 					<h1 className='text-4xl font-bold text-lime-300'>
