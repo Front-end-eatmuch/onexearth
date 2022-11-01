@@ -15,7 +15,7 @@ function PremiereLigue(props) {
 	const beet = props.livetable;
 	const COLUMN = [
 		{
-			Header: "PremiereLigue",
+			Header: "LaLiga",
 			accessor: "laliga",
 		},
 		{
@@ -75,17 +75,17 @@ function PremiereLigue(props) {
 						class=' w-full text-sm text-left text-gray-800'
 					>
 						{props.sporttable.length !== 0 && (
-							<thead class='w-full text-start   text-xs text-gray-500 uppercase bg-gray-200  '>
+							<thead class='w-full text-start   text-xs text-gray-500 uppercase   '>
 								{headerGroups.map((headerGroup) => (
 									<tr
 										{...headerGroup.getHeaderGroupProps()}
-										className='w-full bg-gray-100  '
+										className='w-full bg-[#0F2644]  '
 									>
 										{headerGroup.headers.map((column) => (
 											<th
 												{...column.getHeaderProps()}
 												scope='col '
-												class='text-start w-1/12   py-2  '
+												class='text-start w-1/12   py-2   '
 											>
 												<div className=' w-full break-all text-center  '>
 													{column.render("Header")}
@@ -102,7 +102,7 @@ function PremiereLigue(props) {
 								return (
 									<tr
 										{...row.getRowProps()}
-										class=' border-b bg-white  hover:bg-slate-200 font-semibold '
+										class=' border-b  border-gray-700 bg-ShaBlue-800 text-white   font-semibold '
 										// onClick={() => {
 										// 	console.log(row);
 										// }}
@@ -122,11 +122,17 @@ function PremiereLigue(props) {
 																		row.id
 																	)
 													}
-													class={` border-r-2 !w-1/12 hover:bg-slate-100 ${
+													class={` border border-gray-700 text-sm !w-1/12 hover:bg-ShaBlue-700 cursor-pointer py-2 ${
 														cell.value == blue && row.id ? null : null
 													}`}
 												>
-													<div className='!w-full h-full whitespace-normal'>
+													<div
+														className={`!w-full h-full text-xs whitespace-normal ${
+															row.cells.indexOf(cell) == 0
+																? "font-light"
+																: " text-center font-normal  "
+														}`}
+													>
 														{cell.render("Cell")}
 													</div>
 												</td>

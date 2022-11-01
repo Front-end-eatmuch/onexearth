@@ -4,7 +4,7 @@ function Footer() {
 	return (
 		<div className='w-full px-4'>
 			{" "}
-			<div className=' bg-slate-200  flex items-center justify-center'>
+			<div className=' bg-[#0F2644]   flex items-center justify-center'>
 				<div className='grid sm:grid-cols-2 lg:grid-cols-5  gap-5  py-20'>
 					<div className='flex flex-col items-center space-y-4'>
 						<h4 className='text-xl font-bold text-black '>Lumr</h4>

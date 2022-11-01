@@ -8,7 +8,7 @@ import { useOutletContext } from "react-router-dom";
 function CasinoLiveAll() {
 	const { casinoData } = useOutletContext();
 	return (
-		<div className=' w-full space-y-10 px-5 py-5 '>
+		<div className=' w-full h-full space-y-10 px-5 py-5 '>
 			<CasinoLivePopularSlider casinoData={casinoData} />
 			<CasinoLiveNewgameSlider casinoData={casinoData} />
 			<CasinoLiveSlotsSlider casinoData={casinoData} />

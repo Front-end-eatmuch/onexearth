@@ -6,6 +6,7 @@ import LiveSoccerTable from "../../livePage/LiveMixedTable/LiveSoccerTable/LiveS
 import SportTable from "./SoccerTable/SoccerTable";
 import SportTitleBar from "./SportTitleBar/SportTitleBar";
 import SoccerTable from "./SoccerTable/SoccerTable";
+import SportSwipper from "./SportSwipper/SportSwipper";
 
 function SportContainer() {
 	const [sportTableaus, setSportTableaus] = useState([
@@ -57,16 +58,18 @@ function SportContainer() {
 	let location = useLocation();
 	return (
 		<div className='px-4 h-screen'>
-			<div></div>
-			<div className='px-4 py-2 flex justify-between bg-indigo-900 text-white'>
+			<div className='w-full  px-4 py-2 flex justify-between    text-white'>
 				<div>Sportbets</div>
-				<div>search</div>
+			</div>
+			<div className='mb-5'>
+				<SportSwipper />
 			</div>
 			{
-				<div>
+				<div className='w-full  overflow-x-scroll '>
 					<SportTitleBar />
 				</div>
 			}
+
 			<div>
 				<Outlet context={{ sportTableaus: sportTableaus }} />
 				{/* <SoccerTable sportTableaus={sportTableaus} /> */}

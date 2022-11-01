@@ -61,7 +61,7 @@ function Ligue1Table() {
 	]);
 	return (
 		<div>
-			<div className='px-4 py-2 flex justify-between bg-indigo-900 text-white'>
+			<div className='px-4 py-2 flex justify-between  text-white'>
 				<div>Ligue1</div>
 			</div>
 			<Ligue1SubTable laligaTableaus={laligaTableaus} />

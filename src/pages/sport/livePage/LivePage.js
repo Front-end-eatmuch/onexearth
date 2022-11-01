@@ -8,7 +8,7 @@ function LivePage() {
 	const [open, setOpen] = useState(true);
 	return (
 		<div className='w-full h-screen'>
-			<div className='w-full grid grid-cols-10 gap-0  relative  h-full'>
+			<div className='w-full grid grid-cols-12 xl:grid-cols-10 gap-0  relative  h-full'>
 				{/* the sidebar is generally specific to the page for example the livepage also has its sidebar with data
 			displayed with respect to that page
 			*/}
@@ -32,12 +32,12 @@ function LivePage() {
 						</div>
 					</div>
 				</div>
-				<div className=' hidden md:block md:col-span-2 h-full overflow-y-scroll  '>
+				<div className=' hidden md:block md:col-span-3 xl:col-span-2 h-full overflow-y-scroll  '>
 					<LiveSideBar />
 				</div>
 
 				{/* the sportContainer component contain the table for the sporpage. live Container also has one. */}
-				<div className='col-span-full md:col-span-8 w-full  relative  h-full  overflow-y-scroll overflow-x-scroll '>
+				<div className='col-span-full md:col-span-9  xl:col-span-8 w-full  relative  h-full  overflow-y-scroll overflow-x-scroll '>
 					<div className=''>
 						<Outlet />
 					</div>

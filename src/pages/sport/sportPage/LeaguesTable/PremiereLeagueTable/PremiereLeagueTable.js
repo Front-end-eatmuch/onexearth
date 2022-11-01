@@ -61,7 +61,7 @@ function PremiereLeagueTable() {
 	]);
 	return (
 		<div>
-			<div className='px-4 py-2 flex justify-between bg-indigo-900 text-white'>
+			<div className='px-4 py-2 flex justify-between  text-white'>
 				<div>PremiereLeague</div>
 			</div>
 			<PremiereLeagueSubtable laligaTableaus={laligaTableaus} />

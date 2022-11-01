@@ -33,27 +33,12 @@ function LiveSoccerSubTables(props) {
 	const beet = props.livetable;
 	const COLUMN = [
 		{
-			Header: "laliga",
+			Header: "LaLiga",
 			accessor: "laliga",
 		},
 		{
 			Header: "1",
 			accessor: "rate1",
-			// Cell: (row) => {
-			// 	const data = row.original;
-			// 	const showDesc = (desc) => {
-			// 		alert(desc);
-			// 	};
-			// 	return (
-			// 		<div
-			// 			onClick={() => {
-			// 				showDesc(data.rate1);
-			// 			}}
-			// 		>
-			// 			{(data.rate1)}
-			// 		</div>
-			// 	);
-			// },
 		},
 		{
 			Header: "x",
@@ -83,18 +68,6 @@ function LiveSoccerSubTables(props) {
 	const columns = useMemo(() => COLUMN, []);
 	const data = useMemo(() => props.livetable, []);
 
-	// const tableInstance = useTable({ columns, data });
-
-	// const {
-	// 	getTableProps,
-	// 	getTableBodyProps,
-	// 	headerGroups,
-	// 	rows,
-	// 	prepareRow,
-	// 	selectedFlatRows,
-
-	// 	state: { selectedRowIds },
-	// } = tableInstance;
 	const {
 		getTableProps,
 		getTableBodyProps,
@@ -109,54 +82,30 @@ function LiveSoccerSubTables(props) {
 			data,
 		},
 		useRowSelect
-
-		// (hooks) => {
-		// 	hooks.visibleColumns.push((columns) => [
-		// 		// Let's make a column for selection
-		// 		{
-		// 			id: "selection",
-		// 			// The header can use the table's getToggleAllRowsSelectedProps method
-		// 			// to render a checkbox
-		// 			Header: ({ getToggleAllRowsSelectedProps }) => (
-		// 				<div>
-		// 					<IndeterminateCheckbox {...getToggleAllRowsSelectedProps()} />
-		// 				</div>
-		// 			),
-		// 			// The cell can use the individual row's getToggleRowSelectedProps method
-		// 			// to the render a checkbox
-		// 			Cell: ({ row }) => (
-		// 				<div>
-		// 					<IndeterminateCheckbox {...row.getToggleRowSelectedProps()} />
-		// 				</div>
-		// 			),
-		// 		},
-		// 		...columns,
-		// 	]);
-		// }
 	);
 
 	return (
-		<div className=''>
-			<div className='w-full  '>
+		<div className='w-full'>
+			<div className='w-full bg-slate-500 '>
 				<div class='w-full  relative shadow-md  '>
 					<table
 						{...getTableProps()}
-						class=' w-full text-sm text-left text-gray-800 '
+						class=' w-full text-sm text-left text-gray-800'
 					>
 						{props.livetable.length !== 0 && (
-							<thead class='w-full text-start   text-xs text-gray-500 uppercase bg-gray-200  '>
-								{headerGroups?.map((headerGroup) => (
+							<thead class='w-full text-start   text-xs text-gray-500 uppercase   '>
+								{headerGroups.map((headerGroup) => (
 									<tr
 										{...headerGroup.getHeaderGroupProps()}
-										className='w-full bg-gray-100  '
+										className='w-full bg-[#0F2644]  '
 									>
-										{headerGroup.headers?.map((column) => (
+										{headerGroup.headers.map((column) => (
 											<th
 												{...column.getHeaderProps()}
 												scope='col '
-												class='text-start   py-2 '
+												class='text-start w-1/12   py-2   '
 											>
-												<div className=' w-full whitespace-normal text-center  '>
+												<div className=' w-full break-all text-center  '>
 													{column.render("Header")}
 												</div>
 											</th>
@@ -166,17 +115,17 @@ function LiveSoccerSubTables(props) {
 							</thead>
 						)}
 						<tbody {...getTableBodyProps()}>
-							{rows?.map((row) => {
+							{rows.map((row) => {
 								prepareRow(row);
 								return (
 									<tr
 										{...row.getRowProps()}
-										class=' border-b bg-white  hover:bg-slate-200 font-semibold  '
+										class=' border-b  border-gray-700 bg-ShaBlue-800 text-white   font-semibold '
 										// onClick={() => {
 										// 	console.log(row);
 										// }}
 									>
-										{row.cells?.map((cell) => {
+										{row.cells.map((cell) => {
 											return (
 												<td
 													{...cell.getCellProps()}
@@ -191,11 +140,17 @@ function LiveSoccerSubTables(props) {
 																		row.id
 																	)
 													}
-													class={` border-r-2 w-1/12 hover:bg-slate-100 ${
+													class={` border border-gray-700 text-sm !w-1/12 hover:bg-ShaBlue-700 cursor-pointer py-2 ${
 														cell.value == blue && row.id ? null : null
 													}`}
 												>
-													<div className='w-full h-full whitespace-normal'>
+													<div
+														className={`!w-full h-full text-xs whitespace-normal ${
+															row.cells.indexOf(cell) == 0
+																? "font-light"
+																: " text-center font-normal  "
+														}`}
+													>
 														{cell.render("Cell")}
 													</div>
 												</td>

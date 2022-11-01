@@ -7,15 +7,15 @@ function SportTopChampionship(props) {
 
 	return (
 		<div>
-			<div className='  bg-slate-100 shadow-xl '>
-				<div className='p-4   w-full bg-indigo-900 text-white '>
+			<div className='  '>
+				<div className='p-4   w-full  text-white '>
 					<button
 						className=' w-full flex  justify-between'
 						onClick={() => {
 							setShow(!show);
 						}}
 					>
-						<div className='text-xs font-bold uppercase'>
+						<div className='text-xs font-bold uppercase text-gray-400'>
 							<button>Top Champion</button>
 						</div>
 						<div>
@@ -41,16 +41,22 @@ function SportTopChampionship(props) {
 						{/* {props.championship.map((E) => { */}
 						{/* return ( */}
 						<div className=' pt-2 text-xs font-semibold'>
-							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
+							<div className=' px-4 flex space-x-2 mb-2 font-extrabold '>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-futbol text-red-500'></i>
 								</div>
 
-								<div>
+								<div
+									className={`${
+										location.pathname === "/sport/sports/laliga" &&
+										"  border border-red-400 -skew-y-6   "
+									}`}
+								>
 									<Link
-										to='/sports/laliga'
-										className={`text-xs font-bold text-black ${
-											location.pathname === "/sports/laliga" && "text-green-500"
+										to='/sport/sports/laliga'
+										className={`text-xs font-bold text-gray-400 w-full h-full px-2 ${
+											location.pathname === "/sport/sports/laliga" &&
+											"text-green-500"
 										}`}
 									>
 										La Liga
@@ -61,14 +67,19 @@ function SportTopChampionship(props) {
 						<div className=' pt-2 text-xs font-semibold'>
 							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-shirt text-violet-500'></i>
 								</div>
 
-								<div>
+								<div
+									className={`${
+										location.pathname === "/sport/sports/premiereleague" &&
+										"  border border-red-400 -skew-y-6   "
+									}`}
+								>
 									<Link
-										to='/sports/premiereleague'
-										className={`text-xs font-bold text-black ${
-											location.pathname === "/sports/premiereleague" &&
+										to='/sport/sports/premiereleague'
+										className={`text-xs font-bold text-gray-400   px-2 ${
+											location.pathname === "/sport/sports/premiereleague" &&
 											"text-green-500"
 										}`}
 									>
@@ -83,11 +94,16 @@ function SportTopChampionship(props) {
 									<i class='fa-solid fa-futbol'></i>
 								</div>
 
-								<div>
+								<div
+									className={`${
+										location.pathname === "/sport/sports/seriesa" &&
+										"  border border-red-400 -skew-y-6   "
+									}`}
+								>
 									<Link
-										to='/sports/seriesa'
-										className={`text-xs font-bold text-black ${
-											location.pathname === "/sports/seriesa" &&
+										to='/sport/sports/seriesa'
+										className={`text-xs font-bold text-gray-400  px-2 ${
+											location.pathname === "/sport/sports/seriesa" &&
 											"text-green-500"
 										}`}
 									>
@@ -102,11 +118,17 @@ function SportTopChampionship(props) {
 									<i class='fa-solid fa-futbol'></i>
 								</div>
 
-								<div>
+								<div
+									className={`${
+										location.pathname === "/sport/sports/ligue1" &&
+										"  border border-red-400 -skew-y-6   "
+									}`}
+								>
 									<Link
-										to='/sports/ligue1'
-										className={`text-xs font-bold text-black ${
-											location.pathname === "/sports/ligue1" && "text-green-500"
+										to='/sport/sports/ligue1'
+										className={`text-xs font-bold text-gray-400  px-2 ${
+											location.pathname === "/sport/sports/ligue1" &&
+											"text-green-500"
 										}`}
 									>
 										Ligue 1
@@ -120,11 +142,16 @@ function SportTopChampionship(props) {
 									<i class='fa-solid fa-futbol'></i>
 								</div>
 
-								<div>
+								<div
+									className={`${
+										location.pathname === "/sport/sports/premieraleague" &&
+										"  border border-red-400 -skew-y-6   "
+									}`}
+								>
 									<Link
-										to='/sports/premieraleague'
-										className={`text-xs font-bold text-black ${
-											location.pathname === "/sports/premieraleague" &&
+										to='/sport/sports/premieraleague'
+										className={`text-xs font-bold text-gray-400  px-2 ${
+											location.pathname === "/sport/sports/premieraleague" &&
 											"text-green-500"
 										}`}
 									>
@@ -139,11 +166,16 @@ function SportTopChampionship(props) {
 									<i class='fa-solid fa-futbol'></i>
 								</div>
 
-								<div>
+								<div
+									className={`${
+										location.pathname === "/sport/sports/bundesliga" &&
+										"  border border-red-400 -skew-y-6   "
+									}`}
+								>
 									<Link
-										to='/sports/bundesliga'
-										className={`text-xs font-bold text-black ${
-											location.pathname === "/sports/bundesliga" &&
+										to='/sport/sports/bundesliga'
+										className={`text-xs font-bold text-gray-400  px-2 ${
+											location.pathname === "/sport/sports/bundesliga" &&
 											"text-green-500"
 										}`}
 									>
@@ -158,11 +190,16 @@ function SportTopChampionship(props) {
 									<i class='fa-solid fa-futbol'></i>
 								</div>
 
-								<div>
+								<div
+									className={`${
+										location.pathname === "/sport/sports/eredevisie" &&
+										"  border border-red-400 -skew-y-6   "
+									}`}
+								>
 									<Link
-										to='/sports/eredevisie'
-										className={`text-xs font-bold text-black ${
-											location.pathname === "/sports/eredevisie" &&
+										to='/sport/sports/eredevisie'
+										className={`text-xs font-bold text-gray-400  px-2 ${
+											location.pathname === "/sport/sports/eredevisie" &&
 											"text-green-500"
 										}`}
 									>

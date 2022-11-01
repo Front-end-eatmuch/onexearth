@@ -14,19 +14,19 @@ function Mainlayout() {
 	const { signupOpen, signupOpenHandler } = useContext(Context);
 
 	return (
-		<div className='overscroll-none  '>
+		<div className='  '>
 			<BrowserRouter>
 				<div className='relative  '>
-					<div className='fixed top-0 z-20'>
+					<div className='fixed top-0 z-40'>
 						<Navbar />
 					</div>
 					<div className='mt-14'>
 						<Routess />
 					</div>
 					{signupOpen && (
-						<div className='-mt-14 absolute top-0 right-0 bottom-0 left-0  bg-neutral-500 bg-opacity-70  z-30'>
+						<div className='-mt-14 absolute top-0 right-0 bottom-0 left-0  bg-neutral-500 bg-opacity-70  z-50 scol'>
 							<div className=' w-full h-full flex justify-center pt-36'>
-								<div className='bg-white h-fit py-10  w-big px-10 flex flex-col justify-center relative'>
+								<div className='bg-white  h-fit py-10  w-big px-10 flex flex-col justify-center relative'>
 									<div className='w-full text-center py-4 text-xl font-bold text-blue-500'>
 										Register
 									</div>
@@ -40,7 +40,7 @@ function Mainlayout() {
 											viewBox='0 0 24 24'
 											stroke-width='1.5'
 											stroke='currentColor'
-											class='w-8 h-8 text-white'
+											class='w-8 h-8 text-white hover:rotate-90 duration-500'
 										>
 											<path
 												stroke-linecap='round'

@@ -3,18 +3,19 @@ import React, { useState } from "react";
 function SportTopEvents(props) {
 	const [show2, setShow2] = useState(true);
 	return (
-		<div>
-			<div className='   bg-slate-100  '>
-				<div className='p-4   w-full bg-indigo-900 text-white '>
+		<div className='w-full'>
+			<div className='  '>
+				<div className='p-4   w-full  text-white '>
 					<button
 						className=' w-full flex  justify-between'
 						onClick={() => {
 							setShow2(!show2);
 						}}
 					>
-						<div className='text-xs font-bold uppercase'>
-							<button>Top Events</button>
+						<div className='flex space-x-2 text-xs font-bold uppercase'>
+							<button className='lg:font-bold'>Top Events</button>
 						</div>
+
 						<div>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
@@ -22,7 +23,7 @@ function SportTopEvents(props) {
 								viewBox='0 0 24 24'
 								stroke-width='1.5'
 								stroke='currentColor'
-								class={`w-4 h-4 ${show2 && "rotate-180"}`}
+								class={`lg:w-4 lg:h-4 w-3 h-3 ${show2 && "rotate-180"}`}
 							>
 								<path
 									stroke-linecap='round'
@@ -43,21 +44,20 @@ function SportTopEvents(props) {
 											<i class='fa-solid fa-futbol'></i>
 										</div>
 										<div>T</div>
-										<div>{E.Title}</div>
+										<div className='text-white'>{E.Title}</div>
 									</div>
 									<div className='px-4 flex space-x-2'>
 										<div>
-											<i class='fa-solid fa-shirt'></i>
+											<i class='fa-solid fa-shirt text-green-600'></i>
 										</div>
-										<div>{E.TeamOne}</div>
+										<div className='text-gray-400'>{E.TeamOne}</div>
 									</div>
 									<div className='px-4 flex space-x-2'>
-										<div>
-											<i class='fa-solid fa-shirt'></i>
+										<div className=''>
+											<i class='fa-solid fa-shirt text-red-600'></i>
 										</div>
-										<div>{E.TeamTwo}</div>
+										<div className='text-gray-400'>{E.TeamTwo}</div>
 									</div>
-									<div className='w-full h-8 bg-gray-300'></div>
 								</div>
 							);
 						})}

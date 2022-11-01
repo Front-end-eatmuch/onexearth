@@ -25,7 +25,7 @@ function CasinoSlotsSlider(props) {
 	};
 	return (
 		<div>
-			<div className=' relative bg-white w-full overflow-x-hidden py-5 px-5 space-y-5'>
+			<div className=' relative bg-purple-800 w-full overflow-x-hidden py-5 px-5 space-y-5'>
 				<div className='flex justify-between'>
 					<div>Live 3D slots</div>
 					<div className='flex space-x-3'>

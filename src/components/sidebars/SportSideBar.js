@@ -189,7 +189,7 @@ function SportSideBar() {
 	const [show2, setShow2] = useState(false);
 
 	return (
-		<div className='w-full h-screen overflow-y-scroll  rounded-xl px-2 bg-slate-200   '>
+		<div className='w-full h-screen overflow-y-scroll   px-2 bg-[#193157]   '>
 			<div className='relative  h-full space-y-4 pb-10 '>
 				<SportTopChampionship championship={championship} />
 				<SportTopEvents topSportEvents={topSportEvents} />

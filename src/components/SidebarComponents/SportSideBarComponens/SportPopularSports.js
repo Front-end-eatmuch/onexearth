@@ -9,7 +9,7 @@ function SportPopularSports(props) {
 	const [raceShow, setRaceShow] = useState(false);
 	return (
 		<div>
-			<div className='p-4   w-full bg-indigo-900 text-white '>
+			<div className='p-4   w-full  text-white '>
 				<button
 					className=' w-full flex  justify-between'
 					onClick={() => {
@@ -40,7 +40,7 @@ function SportPopularSports(props) {
 			{show2 && (
 				<div>
 					<div>
-						<div className='p-4   w-full bg-gray-200 '>
+						<div className='p-4   w-full  '>
 							<button
 								className=' w-full flex  justify-between'
 								onClick={() => {
@@ -70,7 +70,7 @@ function SportPopularSports(props) {
 						</div>
 						{cricketShow && (
 							<div className='px-2 py-2 space-y-2 bg-white'>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -97,7 +97,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -124,7 +124,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -151,7 +151,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -182,7 +182,7 @@ function SportPopularSports(props) {
 						)}
 					</div>
 					<div>
-						<div className='p-4   w-full bg-gray-200 '>
+						<div className='p-4   w-full  '>
 							<button
 								className=' w-full flex  justify-between'
 								onClick={() => {
@@ -212,7 +212,7 @@ function SportPopularSports(props) {
 						</div>
 						{soccerShow && (
 							<div className='px-2 py-2 space-y-2 bg-white'>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -239,7 +239,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -266,7 +266,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -293,7 +293,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -324,7 +324,7 @@ function SportPopularSports(props) {
 						)}
 					</div>
 					<div>
-						<div className='p-4   w-full bg-gray-200 '>
+						<div className='p-4   w-full  '>
 							<button
 								className=' w-full flex  justify-between'
 								onClick={() => {
@@ -354,7 +354,7 @@ function SportPopularSports(props) {
 						</div>
 						{volleyShow && (
 							<div className='px-2 py-2 space-y-2 bg-white'>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -381,7 +381,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -408,7 +408,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -435,7 +435,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -466,7 +466,7 @@ function SportPopularSports(props) {
 						)}
 					</div>
 					<div>
-						<div className='p-4   w-full bg-gray-200 '>
+						<div className='p-4   w-full  '>
 							<button
 								className=' w-full flex  justify-between'
 								onClick={() => {
@@ -496,7 +496,7 @@ function SportPopularSports(props) {
 						</div>
 						{raceShow && (
 							<div className='px-2 py-2 space-y-2 bg-white'>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -523,7 +523,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -550,7 +550,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}
@@ -577,7 +577,7 @@ function SportPopularSports(props) {
 										</div>
 									</button>
 								</div>
-								<div className='p-4   w-full bg-gray-200'>
+								<div className='p-4   w-full '>
 									<button
 										className=' w-full flex  justify-between'
 										onClick={() => {}}

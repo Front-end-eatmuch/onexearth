@@ -56,6 +56,8 @@ function LiveHomeSlidder() {
 					pagination={true}
 					mousewheel={true}
 					keyboard={true}
+					loop={true}
+					autoplay={true}
 					modules={[Navigation, Pagination, Mousewheel, Keyboard]}
 					className=' !w-full !h-52   '
 				>

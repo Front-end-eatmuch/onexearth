@@ -13,7 +13,7 @@ function SportPage() {
 			displayed with respect to that page
 			*/}
 				<div
-					className={` absolute  z-20 md:hidden duration-200   ${
+					className={` absolute  z-40 md:hidden duration-200   ${
 						open ? "translate-x-0" : "-translate-x-full"
 					}`}
 				>
@@ -23,7 +23,7 @@ function SportPage() {
 						</div>
 
 						<div
-							className='absolute cursor-pointer top-0 z-40 -right-4  '
+							className='absolute cursor-pointer top-0 z-30 -right-4  '
 							onClick={() => {
 								setOpen(!open);
 							}}
@@ -37,7 +37,7 @@ function SportPage() {
 				</div>
 
 				{/* the sportContainer component contain the table for the sporpage. live Container also has one. */}
-				<div className='col-span-full md:col-span-8 w-full  relative  h-full  overflow-y-scroll overflow-x-scroll '>
+				<div className='col-span-full md:col-span-8 w-full    h-full  overflow-y-scroll overflow-x-scroll '>
 					<div className=''>
 						<Outlet />
 					</div>

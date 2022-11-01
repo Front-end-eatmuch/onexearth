@@ -18,13 +18,13 @@ function Swipperslide() {
 		{
 			id: 1,
 			AdImage:
-				"https://cdn.pixabay.com/photo/2016/08/13/11/57/stadium-1590576_1280.jpg",
+				"https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
 			AdInfo: "",
 		},
 		{
 			id: 2,
 			AdImage:
-				"https://cdn.pixabay.com/photo/2014/10/22/18/04/man-498473_1280.jpg",
+				"https://images.unsplash.com/photo-1667238158829-880e8c3a89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3264&q=80",
 			AdInfo: "",
 		},
 		{
@@ -42,27 +42,28 @@ function Swipperslide() {
 		{
 			id: 5,
 			AdImage:
-				"https://cdn.pixabay.com/photo/2013/03/21/15/52/basketball-95607_1280.jpg",
+				"https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2369&q=80",
 			AdInfo: "",
 		},
 	]);
 	return (
 		<div className=''>
 			{/* {console.log()} */}
-			<div className='sm:w-small1 md:w-big  bg-white  relative px-5 '>
+			<div className='sm:w-small1 md:w-big   relative px-5 '>
 				<Swiper
 					cssMode={true}
 					navigation={true}
 					pagination={true}
 					mousewheel={true}
 					keyboard={true}
+					longSwipes={true}
 					modules={[Navigation, Pagination, Mousewheel, Keyboard]}
 					className=' !w-full !h-96  rounded-3xl '
 				>
 					{adviews.map((v, i) => {
 						return (
 							<SwiperSlide className=' !h-96 !w-full lg:!h-96 lg:!w-big'>
-								<div className={` !w-full md:!w-big`}>
+								<div className={` !w-full md:!w-big !h-full`}>
 									<img src={v.AdImage} alt='' className='!w-full !h-full' />
 								</div>
 							</SwiperSlide>

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../context/Context";
+import ReactPlayer from "react-player";
 
 function Betslip() {
 	const { betslip, deleteBetSlip, deleteAllBetSlip } = useContext(Context);
@@ -11,9 +12,9 @@ function Betslip() {
 	};
 
 	return (
-		<div className='w-80 xl:w-full '>
-			<div className='h-full  w-80 lg:w-full  bg-slate-200  p-2 space-y-4 rounded-2xl'>
-				<div className='px-2 flex space-x-2 py-4 bg-indigo-900 text-white items-center'>
+		<div className=' w-full bg-[#193157] h-full overflow-y-scroll   '>
+			<div className='h-full   lg:w-full   space-y-4 rounded-2xl'>
+				<div className='px-4 flex space-x-2 py-4  text-white items-center'>
 					<div>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -32,7 +33,7 @@ function Betslip() {
 						<button>SETTINGS</button>
 					</div>
 				</div>
-				<div className='relative'>
+				<div className='relative     '>
 					{sure && (
 						<div className='absolute right-0 top-0 bottom-0 left-0 bg-opacity-90 bg-slate-400'>
 							<div className='w-full h-full flex  justify-center items-center  '>
@@ -63,7 +64,7 @@ function Betslip() {
 							</div>
 						</div>
 					)}
-					<div className='px-2 flex space-x-2 py-4 bg-indigo-900 text-white items-center justify-between'>
+					<div className='px-4 flex space-x-2 py-4  text-white items-center justify-between'>
 						<div className='font-bold text-xs'>
 							<button>Bet Slip</button>
 						</div>
@@ -88,23 +89,23 @@ function Betslip() {
 						</div>
 					</div>
 					<div
-						className={`w-full space-y-2 bg-white p-2  ${
+						className={`w-full space-y-1  py-2  ${
 							betslip.length === 0 ? "h-40" : "h-full"
 						}`}
 					>
 						{betslip.map((v) => {
 							return (
-								<div className='cursor-pointer  bg-teal-200 text-gray-600 py-2 px-2'>
+								<div className='cursor-pointer  bg-fuchsia-800 text-gray-600 py-2 px-2'>
 									<div
 										className='w-full flex justify-end'
 										onClick={() => deleteBetSlip(v.name, v.value, v.rowid)}
 									>
-										<div className=' bg-cyan-400 '>
+										<div className=' bg-ShaBlue-700 '>
 											<svg
 												xmlns='http://www.w3.org/2000/svg'
 												viewBox='0 0 24 24'
 												fill='currentColor'
-												class='w-4 h-4'
+												class='w-4 h-4  text-white'
 											>
 												<path
 													fill-rule='evenodd'
@@ -115,10 +116,10 @@ function Betslip() {
 										</div>
 									</div>
 									<div className='flex px-4 items-center space-x-2 w-full'>
-										<div className='flex flex-col text-sm break-all text-green-600'>
+										<div className='flex flex-col text-sm break-all text-gray-300'>
 											{v.name}
 										</div>
-										<div className='text-sm'>{v.value}</div>
+										<div className='text-sm   text-black'>{v.value}</div>
 									</div>
 
 									{/* <div className='px-4'>{v.rowid}</div> */}
@@ -126,7 +127,23 @@ function Betslip() {
 							);
 						})}
 					</div>
-					<div className='w-full bg-indigo-900 h-16 rounded-b-xl '></div>
+					<div className='w-full h-16 rounded-b-xl font-light text-gray-400'>
+						Total
+					</div>
+				</div>
+				<div>
+					<div className='!h-32 !w-full'>
+						<ReactPlayer
+							url='https://youtu.be/Vhn2RkoWTgw'
+							className=''
+							width='100%'
+							height='100%'
+							controls='false'
+							muted
+							playing
+							loop
+						></ReactPlayer>
+					</div>
 				</div>
 			</div>
 		</div>

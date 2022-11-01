@@ -11,7 +11,7 @@ function SoccerTable() {
 	const { sportTableaus } = useOutletContext();
 	return (
 		<div className='h-screen'>
-			<div className='h-full'>
+			<div className='h-full '>
 				<SoccerSubTables sporttable={sportTableaus} />
 				<PremiereLigue sporttable={sportTableaus} />
 				<MoscowChampionship sporttable={sportTableaus} />

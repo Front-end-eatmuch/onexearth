@@ -20,7 +20,7 @@ function CasinoOtherSlider(props) {
 	const navigationNextRef4 = React.useRef(null);
 	return (
 		<div>
-			<div className=' relative bg-slate-50 w-full overflow-x-hidden py-5 px-5 space-y-5'>
+			<div className=' relative bg-[#193157] w-full overflow-x-hidden py-5 px-5 space-y-5'>
 				<div>Other</div>
 				<Swiper
 					id='swiper2'

@@ -26,9 +26,9 @@ function CasinoLiveNewgameSlider(props) {
 	};
 	return (
 		<div>
-			<div className=' relative bg-white w-full overflow-x-hidden py-5 px-5 space-y-5'>
+			<div className=' relative bg-green-800 w-full overflow-x-hidden py-5 px-5 space-y-5'>
 				<div className='flex justify-between'>
-					<div>Live New Game</div>
+					<div className='text-white'>Live New Game</div>
 					<div className='flex space-x-3'>
 						<div className='space-x-2'>
 							<button
