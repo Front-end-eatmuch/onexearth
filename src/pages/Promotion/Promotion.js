@@ -11,9 +11,10 @@ function Promotion() {
 					<div className='w-full justify-center flex  px-4 space-x-2  '>
 						<Link
 							to='all'
-							className={` px-6 bg-ShaBlue2-300 py-2 rounded-lg text-gray-300 ${
-								location.pathname === "/promotion/all" &&
-								"text-white bg-fuchsia-700"
+							className={` px-6  py-2 rounded-lg text-gray-300 ${
+								location.pathname === "/promotion/all"
+									? "text-white bg-fuchsia-700"
+									: "bg-ShaBlue2-300"
 							}`}
 						>
 							All
@@ -21,9 +22,10 @@ function Promotion() {
 
 						<Link
 							to='sport'
-							className={` px-6 bg-ShaBlue2-300 py-2 rounded-lg text-gray-300 ${
-								location.pathname === "/promotion/sport" &&
-								"text-white bg-fuchsia-700"
+							className={` px-6  py-2 rounded-lg text-gray-300 ${
+								location.pathname === "/promotion/sport"
+									? "text-white bg-fuchsia-700"
+									: "bg-ShaBlue2-300"
 							}`}
 						>
 							Sport
@@ -31,9 +33,10 @@ function Promotion() {
 
 						<Link
 							to='casino'
-							className={` px-6 bg-ShaBlue2-300 py-2 rounded-lg text-gray-300 ${
-								location.pathname === "/promotion/casino" &&
-								"text-white bg-fuchsia-700"
+							className={` px-6  py-2 rounded-lg text-gray-300 ${
+								location.pathname === "/promotion/casino"
+									? "text-white bg-fuchsia-700"
+									: "bg-ShaBlue2-300"
 							}`}
 						>
 							Casino
@@ -41,9 +44,10 @@ function Promotion() {
 
 						<Link
 							to='vip'
-							className={` px-6 bg-ShaBlue2-300 py-2 rounded-lg text-gray-300 ${
-								location.pathname === "/promotion/vip" &&
-								"text-white bg-fuchsia-700"
+							className={` px-6  py-2 rounded-lg text-gray-300 ${
+								location.pathname === "/promotion/vip"
+									? "text-white bg-fuchsia-700"
+									: "bg-ShaBlue2-300"
 							}`}
 						>
 							Vip

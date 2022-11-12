@@ -26,7 +26,7 @@ function Mainlayout() {
 					{signupOpen && (
 						<div className='-mt-14 absolute top-0 right-0 bottom-0 left-0  bg-neutral-500 bg-opacity-70  z-50 scol'>
 							<div className=' w-full h-full flex justify-center pt-36'>
-								<div className='bg-white  h-fit py-10  w-big px-10 flex flex-col justify-center relative'>
+								<div className='bg-white  h-fit py-10 w-10/12 lg:w-8/12 px-10 flex flex-col justify-center relative'>
 									<div className='w-full text-center py-4 text-xl font-bold text-blue-500'>
 										Register
 									</div>

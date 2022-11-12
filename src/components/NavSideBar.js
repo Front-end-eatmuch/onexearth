@@ -79,7 +79,7 @@ function NavSideBar() {
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
 							fill='currentColor'
-							class='w-6 h-6 text-red-600'
+							class='w-6 h-6 text-red-600 animate-pulse duration-700'
 						>
 							<path
 								fill-rule='evenodd'
@@ -137,7 +137,7 @@ function NavSideBar() {
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 24 24'
 							fill='currentColor'
-							class='w-6 h-6 text-sky-200'
+							class='w-6 h-6 text-yellow-500'
 						>
 							<path
 								fill-rule='evenodd'

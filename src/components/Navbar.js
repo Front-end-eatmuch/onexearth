@@ -142,7 +142,7 @@ function Navbar() {
 							<div className='flex'>
 								<div className='relative'>
 									<Menu>
-										<Menu.Button className='rounded-xl px-3 py-1 bg-blue-800 text-white'>
+										<Menu.Button className='rounded-xl px-3 py-2 bg-blue-800 text-white'>
 											<div className='flex'>
 												<div className='h-full py-1 font-extrabold'>
 													<svg
@@ -358,8 +358,8 @@ function Navbar() {
 									</Menu>
 								</div>
 							</div>
-							<div className='bg-orange-500 px-3 py-1 rounded-3xl'>
-								<Link to='accountsetting/deposit'>Deposit</Link>
+							<div className='bg-orange-500 px-3 py-2 rounded-xl'>
+								<Link to='accountsetting/personaldetails'>Deposit</Link>
 							</div>
 						</div>
 					) : (
