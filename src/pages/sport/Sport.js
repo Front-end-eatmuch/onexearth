@@ -5,7 +5,7 @@ import Betslip from "../../components/Betslip";
 function Sport() {
 	const [open, setOpen] = useState(true);
 	return (
-		<div className='h-full w-screen  bg-[#021A3A] relative'>
+		<div className='h-full w-screen  bg-[#092A42] relative'>
 			<div className='grid grid-flow-col grid-cols-12 w-full   '>
 				{/* the outlet is a grid which contains a subroute to a subpage
 				it is initial full in width then shares width with betslip when
@@ -37,7 +37,7 @@ function Sport() {
 					<Betslip />
 				</div> */}
 
-				<div className=' hidden xl:block xl:col-span-2 h-full overflow-y-scroll  '>
+				<div className='mt-2 hidden xl:block xl:col-span-2 h-full overflow-y-scroll  '>
 					<Betslip />
 				</div>
 			</div>

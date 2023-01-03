@@ -12,9 +12,9 @@ function Betslip() {
 	};
 
 	return (
-		<div className=' w-full bg-[#193157] h-full overflow-y-scroll   '>
+		<div className=' w-full bg-[] h-full overflow-y-scroll   '>
 			<div className='h-full   lg:w-full   space-y-4 rounded-2xl'>
-				<div className='px-4 flex space-x-2 py-4  text-white items-center'>
+				<div className='px-4 flex space-x-2 py-3  text-white bg-[#4B88B9] items-center'>
 					<div>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -33,7 +33,7 @@ function Betslip() {
 						<button>SETTINGS</button>
 					</div>
 				</div>
-				<div className='relative     '>
+				<div className='relative bg-white    '>
 					{sure && (
 						<div className='absolute right-0 top-0 bottom-0 left-0 bg-opacity-90 bg-slate-400'>
 							<div className='w-full h-full flex  justify-center items-center  '>
@@ -64,7 +64,7 @@ function Betslip() {
 							</div>
 						</div>
 					)}
-					<div className='px-4 flex space-x-2 py-4  text-white items-center justify-between'>
+					<div className='px-4 flex space-x-2 py-4  text-sky-600 items-center justify-between'>
 						<div className='font-bold text-xs'>
 							<button>Bet Slip</button>
 						</div>

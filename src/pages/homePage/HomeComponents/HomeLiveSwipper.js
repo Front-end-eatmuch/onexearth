@@ -7,9 +7,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { A11y, Navigation, Pagination } from "swiper";
+import { A11y, Autoplay, Navigation, Pagination } from "swiper";
 
-function LiveSwipper() {
+function HomeLiveSwipper() {
 	const [butter, setButter] = useState(false);
 	const [highlight, setHighlight] = useState([
 		{
@@ -61,14 +61,14 @@ function LiveSwipper() {
 
 	return (
 		<div
-			className={`w-full  relative hover  `}
+			className={`w-full h-full  relative hover  `}
 			onMouseEnter={() => setButter(!butter)}
 			onMouseLeave={() => setButter(!butter)}
 		>
 			<div className='w-full flex justify-between z-30 absolute px-5 top-14'>
 				<button
 					id='custom_next'
-					className={`py-1 px-1 bg-ShaBlue2-700 text-gray-300  rounded-full transform duration-500 ${
+					className={`py-1 px-1 bg-gray-200  rounded-full transform duration-500 ${
 						butter ? "flex duration-500" : "hidden"
 					}`}
 					ref={navigationNextRef9}
@@ -90,7 +90,7 @@ function LiveSwipper() {
 				</button>
 				<button
 					id='custom_prev'
-					className={`py-1 px-1  bg-ShaBlue2-700 text-gray-300   rounded-full transform duration-500 ${
+					className={`py-1 px-1 bg-gray-200 rounded-full transform duration-500 ${
 						butter ? "flex duration-500" : "hidden"
 					}`}
 					ref={navigationPrevRef9}
@@ -113,7 +113,7 @@ function LiveSwipper() {
 				</button>
 			</div>
 			<Swiper
-				slidesPerView={3}
+				slidesPerView={1}
 				spaceBetween={5}
 				pagination={{
 					clickable: true,
@@ -122,14 +122,18 @@ function LiveSwipper() {
 					prevEl: navigationNextRef9.current,
 					nextEl: navigationPrevRef9.current,
 				}}
-				modules={[Pagination, Navigation, A11y]}
-				className={` h-[200px]   w-full `}
+				modules={[Pagination, Navigation, A11y, Autoplay]}
+				autoplay={{
+					delay: 5000,
+					disableOnInteraction: false,
+				}}
+				className={` h-full   w-full `}
 			>
 				{highlight.map((f) => {
 					return (
 						<SwiperSlide className='w-96 h-full bg-[#225B8E] px-2 py-5 rounded-lg'>
-							<div className='w-full flex flex-col justify-center  h-full space-y-4'>
-								<div className='flex w-full justify-between text-gray-300'>
+							<div className='w-full flex flex-col justify-center h-full space-y-4'>
+								<div className='flex w-full justify-between text-white'>
 									<div>
 										<div className='text-start'>
 											<i class='fa-solid fa-volleyball text-xl'></i>
@@ -144,10 +148,10 @@ function LiveSwipper() {
 									</div>
 								</div>
 								<div className='w-full flex  justify-between space-x-1'>
-									<button className='px-5 py-1 text-start bg-gray-200 text-white w-full rounded-lg bg-opacity-50'>
+									<button className='px-5 py-1 text-start bg-white text-white w-full rounded-lg bg-opacity-50'>
 										{f.TeamoneScore}
 									</button>
-									<button className='px-5 py-1 w-full  text-end bg-gray-200 text-white rounded-lg bg-opacity-50'>
+									<button className='px-5 py-1 w-full  text-end bg-white text-white rounded-lg bg-opacity-50'>
 										{f.TeamoneScore}
 									</button>
 								</div>
@@ -160,4 +164,4 @@ function LiveSwipper() {
 	);
 }
 
-export default LiveSwipper;
+export default HomeLiveSwipper;

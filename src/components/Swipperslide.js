@@ -17,26 +17,25 @@ function Swipperslide() {
 	const [adviews, setAdviews] = useState([
 		{
 			id: 1,
-			AdImage:
-				"https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+			AdImage: "https://i.ytimg.com/vi/NgpQcGqMPX8/maxresdefault.jpg",
 			AdInfo: "",
 		},
 		{
 			id: 2,
 			AdImage:
-				"https://images.unsplash.com/photo-1667238158829-880e8c3a89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3264&q=80",
+				"https://v2l.traincdn.com/default/img/bonusnew/Welcome-bonus-india_945x370.jpg",
 			AdInfo: "",
 		},
 		{
 			id: 3,
 			AdImage:
-				"https://cdn.pixabay.com/photo/2016/12/31/16/52/dart-1943313_1280.jpg",
+				"https://v2l.traincdn.com/genfiles/cms/1/desktop/bonus/rules/1st/1st-in-slider.jpg",
 			AdInfo: "",
 		},
 		{
 			id: 4,
 			AdImage:
-				"https://cdn.pixabay.com/photo/2021/02/01/20/16/yachts-5971866_1280.jpg",
+				"https://in.1xbet.com/genfiles/cms/1-285/desktop/ourPartners/partner/barcelona/barcelona-team2x.webp",
 			AdInfo: "",
 		},
 		{
@@ -49,7 +48,7 @@ function Swipperslide() {
 	return (
 		<div className=''>
 			{/* {console.log()} */}
-			<div className='sm:w-small1 md:w-big   relative px-5 '>
+			<div className='sm:w-full md:w-full h-full   relative  '>
 				<Swiper
 					cssMode={true}
 					navigation={true}
@@ -58,11 +57,11 @@ function Swipperslide() {
 					keyboard={true}
 					longSwipes={true}
 					modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-					className=' !w-full !h-96  rounded-3xl '
+					className=' !w-full !h-small2   '
 				>
 					{adviews.map((v, i) => {
 						return (
-							<SwiperSlide className=' !h-96 !w-full lg:!h-96 lg:!w-big'>
+							<SwiperSlide className=' !h-small2 !w-full lg:!h-small2 lg:!w-big'>
 								<div className={` !w-full md:!w-big !h-full`}>
 									<img src={v.AdImage} alt='' className='!w-full !h-full' />
 								</div>

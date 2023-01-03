@@ -55,7 +55,36 @@ import EredevisieTable from "./pages/sport/sportPage/LeaguesTable/EredevisieTabl
 import SeriesATable from "./pages/sport/sportPage/LeaguesTable/SeriesATable/SeriesATable";
 function Routess() {
 	const routes = useRoutes([
-		{ path: "/", element: <Homepage /> },
+		{
+			path: "/",
+			element: <Homepage />,
+			children: [
+				{
+					path: "soccer",
+					element: <SoccerTable />,
+				},
+				{
+					path: "volleyball",
+					element: <SoccerTable />,
+				},
+				{
+					path: "basketball",
+					element: <SoccerTable />,
+				},
+				{
+					path: "baseball",
+					element: <SoccerTable />,
+				},
+				{
+					path: "cricket",
+					element: <SoccerTable />,
+				},
+				{
+					path: "tennisball",
+					element: <SoccerTable />,
+				},
+			],
+		},
 		// {
 		// 	path: "login",
 		// 	element: <Login />,

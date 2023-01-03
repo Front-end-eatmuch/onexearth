@@ -9,7 +9,7 @@ function SportPopularSports(props) {
 	const [raceShow, setRaceShow] = useState(false);
 	return (
 		<div>
-			<div className='p-4   w-full  text-white '>
+			<div className='p-4 bg-[#2C6CA7]   w-full  text-white '>
 				<button
 					className=' w-full flex  justify-between'
 					onClick={() => {

@@ -5,7 +5,7 @@ function SportTopEvents(props) {
 	return (
 		<div className='w-full'>
 			<div className='  '>
-				<div className='p-4   w-full  text-white '>
+				<div className='p-4 bg-[#2C6CA7]   w-full  text-white '>
 					<button
 						className=' w-full flex  justify-between'
 						onClick={() => {
@@ -50,13 +50,13 @@ function SportTopEvents(props) {
 										<div>
 											<i class='fa-solid fa-shirt text-green-600'></i>
 										</div>
-										<div className='text-gray-400'>{E.TeamOne}</div>
+										<div className='text-sky-600'>{E.TeamOne}</div>
 									</div>
 									<div className='px-4 flex space-x-2'>
 										<div className=''>
 											<i class='fa-solid fa-shirt text-red-600'></i>
 										</div>
-										<div className='text-gray-400'>{E.TeamTwo}</div>
+										<div className='text-sky-600'>{E.TeamTwo}</div>
 									</div>
 								</div>
 							);

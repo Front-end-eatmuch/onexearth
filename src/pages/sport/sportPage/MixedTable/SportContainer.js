@@ -57,11 +57,11 @@ function SportContainer() {
 	]);
 	let location = useLocation();
 	return (
-		<div className='px-4 h-screen'>
-			<div className='w-full  px-4 py-2 flex justify-between    text-white'>
+		<div className='px-2 h-screen'>
+			<div className='w-full mb-2  px-4 py-2 flex justify-between bg-[#2C6CA7]   text-white'>
 				<div>Sportbets</div>
 			</div>
-			<div className='mb-5'>
+			<div className='mb-2'>
 				<SportSwipper />
 			</div>
 			{

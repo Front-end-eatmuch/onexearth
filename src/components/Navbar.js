@@ -9,7 +9,7 @@ import NavSideBar from "./NavSideBar";
 function Navbar() {
 	let location = useLocation();
 	const [open, setOpen] = useState(false);
-	const [navSide, setNavSide] = useState(false);
+	const [navSide, setNavSide] = useState(true);
 	const { signupOpenHandler } = useContext(Context);
 
 	// let newlocation = location.pathname.substr(0, 13);
@@ -18,7 +18,7 @@ function Navbar() {
 	// console.log(location.pathname);
 	return (
 		<div className=''>
-			<div className='flex py-2   items-center bg-[#021A3A] w-screen justify-between'>
+			<div className='flex py-1   items-center bg-[#1A5683] w-screen justify-between'>
 				<div className='flex px-2 '>
 					<div className='cursor-pointer relative'>
 						<div className='' onClick={() => setNavSide(!navSide)}>
@@ -61,7 +61,7 @@ function Navbar() {
 				</div>
 
 				<div className='flex  items-center justify-end'>
-					<div className=' space-x-3 flex '>
+					<div className=' space-x-6 flex '>
 						{/* <div className='bg-rose-700 px-2 py-1 rounded-lg '>
 							<Link to='/sports' className='text-xs font-bold text-white  '>
 								Mobile App
@@ -69,69 +69,73 @@ function Navbar() {
 						</div> */}
 						<Link
 							to='/sport/sports/sporttables/soccer'
-							className={` font-bold text-neutral-400`}
+							className={` font-bold text-white`}
 						>
 							<div
 								className={`  py-1 flex  items-center  space-x-2 ${
 									location.pathname.substr(0, 13) === "/sport/sports"
-										? " text-white "
+										? " text-neutral-400 "
 										: null
 								} `}
 							>
-								<div className='text-md font-light  hidden md:flex'>Sport</div>
+								<div className='text-md font-semibold  hidden md:flex'>
+									Sport
+								</div>
 							</div>
 						</Link>
 						<Link
 							to='/sport/live/livetables/soccer'
-							className=' font-bold text-neutral-400  '
+							className=' font-bold text-white  '
 						>
 							<div
 								className={`  py-1 flex items-center space-x-2  ${
 									location.pathname.substr(0, 11) === "/sport/live"
-										? " text-white "
+										? " text-neutral-400 "
 										: null
 								} `}
 							>
-								<div className='text-md font-light hidden md:flex'>Live</div>
+								<div className='text-md font-semibold hidden md:flex'>Live</div>
 							</div>
 						</Link>
-						<Link to='/casino/all' className='font-bold text-neutral-400  '>
+						<Link to='/casino/all' className='font-bold text-white  '>
 							<div
 								className={`  py-1 flex items-center  space-x-2 ${
 									location.pathname.slice(0, 8) === "/casino/"
-										? " text-white "
+										? " text-neutral-400 "
 										: null
 								} `}
 							>
-								<div className='text-md font-light hidden md:flex '>Casino</div>
+								<div className='text-md font-semibold hidden md:flex '>
+									Casino
+								</div>
 							</div>
 						</Link>
 						<Link
 							to='/casino-live/all'
-							className='font-bold text-neutral-400 hidden lg:block '
+							className='font-bold text-white hidden lg:block '
 						>
 							<div
 								className={`  py-1 flex items-center  space-x-2 ${
 									location.pathname.slice(0, 13) === "/casino-live/"
-										? " text-white "
+										? " text-neutral-400 "
 										: null
 								} `}
 							>
-								<div className='text-md font-light '>Live Casino</div>
+								<div className='text-md font-semibold '>Live Casino</div>
 							</div>
 						</Link>
 						<Link
 							to='/promotion/all'
-							className='  text-neutral-400  hidden lg:block '
+							className='  text-white  hidden lg:block '
 						>
 							<div
 								className={`  py-1 flex items-center  space-x-2 ${
 									location.pathname.slice(0, 10) === "/promotion"
-										? " text-white "
+										? " text-neutral-400 "
 										: null
 								} `}
 							>
-								<div className='text-md font-light'>Promotion</div>
+								<div className='text-md font-semibold'>Promotion</div>
 							</div>
 						</Link>
 					</div>

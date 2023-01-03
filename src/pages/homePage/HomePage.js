@@ -14,6 +14,8 @@ import HomeGames from "./HomeComponents/HomeGames";
 import HomeLivecasino from "./HomeComponents/HomeLivecasino";
 import HomeNewGame from "./HomeComponents/HomeNewGame";
 import HomeDiscount from "./HomeComponents/HomeDiscount";
+import HomeLiveSoccerTable from "./HomeLiveSoccerTable/HomeLiveSoccerTable";
+import HomeSoccerTable from "./HomeSoccerTable/HomeSoccerTable";
 
 function HomePage() {
 	const [open, setOpen] = useState(true);
@@ -68,13 +70,22 @@ function HomePage() {
 	]);
 
 	return (
-		<div className='bg-[#021A3A] w-screen '>
+		<div className='bg-[#092A42] w-screen '>
 			<div className='w-screen '>
 				<AdsNlogin />
 			</div>
+			<div className='grid grid-cols-12 px-4 space-x-2'>
+				<div className='col-span-full xl:col-span-10 space-y-4 '>
+					<HomeLiveSoccerTable />
+					<HomeSoccerTable />
+				</div>
+				<div className='hidden xl:flex lg:col-span-2'>
+					<Betslip />
+				</div>
+			</div>
 			<div className='w-full flex items-center  flex-col py-10'>
 				<div className='w-full grid grid-cols-8'>
-					<div className='w-full col-span-6 col-start-2 space-y-10 '>
+					{/* <div className='w-full col-span-6 col-start-2 space-y-10 '>
 						<Bar1 />
 						<div className='space-y-1'>
 							<Bar2 />
@@ -85,8 +96,8 @@ function HomePage() {
 						<HomeGames topGames={topGames} />
 						<HomeLivecasino />
 						<HomeNewGame />
-					</div>
-					<div className='col-span-8 grid grid-cols-8 bg-pink-600 py-5'>
+					</div> */}
+					<div className='col-span-8 grid grid-cols-8  py-5'>
 						<div className='col-span-6 col-start-2'>
 							<HomeDiscount />
 						</div>

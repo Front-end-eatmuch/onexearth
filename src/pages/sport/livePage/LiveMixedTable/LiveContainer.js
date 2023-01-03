@@ -58,14 +58,14 @@ function LiveContainer() {
 	console.log(liveTableaus);
 	let location = useLocation();
 	return (
-		<div className='px-4'>
+		<div className='px-2'>
 			{location.pathname === "/live/livetables/home" && (
-				<div className='mb-4'>
+				<div className='mb-2'>
 					<LiveHomeSlidder />
 				</div>
 			)}
 
-			<div className='px-4 py-2 flex space-x-2   text-white'>
+			<div className='px-4 py-2 flex space-x-2 bg-[#2C6CA7] mb-2   text-white'>
 				<div>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -84,7 +84,7 @@ function LiveContainer() {
 				</div>
 				<div>live Matches</div>
 			</div>
-			<div>
+			<div className='mb-2'>
 				<LiveSwipper />
 			</div>
 			<div>

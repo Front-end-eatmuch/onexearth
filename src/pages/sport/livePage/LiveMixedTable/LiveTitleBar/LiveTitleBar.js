@@ -5,11 +5,11 @@ function LiveTitleBar() {
 	const location = useLocation();
 
 	return (
-		<div className='w-full overflow-x-scroll'>
+		<div className='w-full overflow-x-scroll bg-[#1A5683]'>
 			<div className=' flex justify-between  py-2 w-full px-4'>
 				<Link
 					to='volleyball'
-					className={`text-xs font-bold  text-gray-700 border border-gray-700 px-2 rounded-lg  ${
+					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg  ${
 						location.pathname === "/sport/sports/sporttables/volleyball" && ""
 					}`}
 				>
@@ -28,7 +28,7 @@ function LiveTitleBar() {
 
 				<Link
 					to='soccer'
-					className={`text-xs font-bold  text-gray-700 border border-gray-700 px-2 rounded-lg   ${
+					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg   ${
 						location.pathname === "/sports/sporttables/soccer" && ""
 					}`}
 				>
@@ -47,7 +47,7 @@ function LiveTitleBar() {
 
 				<Link
 					to='basketball'
-					className={`text-xs font-bold  text-gray-700 border border-gray-700 px-2 rounded-lg   ${
+					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg   ${
 						location.pathname === "/sports/sporttables/basketball" && ""
 					}`}
 				>
@@ -66,7 +66,7 @@ function LiveTitleBar() {
 
 				<Link
 					to='cricket'
-					className={`text-xs font-bold  text-gray-700 border border-gray-700 px-2 rounded-lg   ${
+					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg   ${
 						location.pathname === "/sports/sporttables/cricket" && ""
 					}`}
 				>
@@ -101,7 +101,7 @@ function LiveTitleBar() {
 
 				<Link
 					to='baseball'
-					className={`text-xs font-bold space-x-2 text-gray-700 border border-gray-700 px-2 rounded-lg  flex items-center ${
+					className={`text-xs font-bold space-x-2 text-gray-400 border border-gray-700 px-2 rounded-lg  flex items-center ${
 						location.pathname === "/sports/sporttables/baseball" &&
 						"text-green-500"
 					}`}
@@ -137,7 +137,7 @@ function LiveTitleBar() {
 
 				<Link
 					to='tennisball'
-					className={`text-xs font-bold space-x-2 text-gray-700 border border-gray-700 px-2 rounded-lg  flex items-center ${
+					className={`text-xs font-bold space-x-2 text-gray-400 border border-gray-700 px-2 rounded-lg  flex items-center ${
 						location.pathname === "/sports/sporttables/tennisball" &&
 						"text-green-500"
 					}`}

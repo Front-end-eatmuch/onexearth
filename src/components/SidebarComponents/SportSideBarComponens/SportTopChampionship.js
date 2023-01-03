@@ -8,14 +8,14 @@ function SportTopChampionship(props) {
 	return (
 		<div>
 			<div className='  '>
-				<div className='p-4   w-full  text-white '>
+				<div className='p-4 bg-[#2C6CA7]   w-full  text-white '>
 					<button
 						className=' w-full flex  justify-between'
 						onClick={() => {
 							setShow(!show);
 						}}
 					>
-						<div className='text-xs font-bold uppercase text-gray-400'>
+						<div className='text-xs font-bold uppercase text-white'>
 							<button>Top Champion</button>
 						</div>
 						<div>
@@ -54,7 +54,7 @@ function SportTopChampionship(props) {
 								>
 									<Link
 										to='/sport/sports/laliga'
-										className={`text-xs font-bold text-gray-400 w-full h-full px-2 ${
+										className={`text-xs font-bold text-sky-600 w-full h-full px-2 ${
 											location.pathname === "/sport/sports/laliga" &&
 											"text-green-500"
 										}`}
@@ -78,7 +78,7 @@ function SportTopChampionship(props) {
 								>
 									<Link
 										to='/sport/sports/premiereleague'
-										className={`text-xs font-bold text-gray-400   px-2 ${
+										className={`text-xs font-bold text-sky-600  px-2 ${
 											location.pathname === "/sport/sports/premiereleague" &&
 											"text-green-500"
 										}`}
@@ -91,7 +91,7 @@ function SportTopChampionship(props) {
 						<div className=' pt-2 text-xs font-semibold'>
 							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-futbol text-green-400'></i>
 								</div>
 
 								<div
@@ -102,7 +102,7 @@ function SportTopChampionship(props) {
 								>
 									<Link
 										to='/sport/sports/seriesa'
-										className={`text-xs font-bold text-gray-400  px-2 ${
+										className={`text-xs font-bold text-sky-600  px-2 ${
 											location.pathname === "/sport/sports/seriesa" &&
 											"text-green-500"
 										}`}
@@ -115,7 +115,7 @@ function SportTopChampionship(props) {
 						<div className=' pt-2 text-xs font-semibold'>
 							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-futbol bg-fuchsia-500'></i>
 								</div>
 
 								<div
@@ -126,7 +126,7 @@ function SportTopChampionship(props) {
 								>
 									<Link
 										to='/sport/sports/ligue1'
-										className={`text-xs font-bold text-gray-400  px-2 ${
+										className={`text-xs font-bold text-sky-600  px-2 ${
 											location.pathname === "/sport/sports/ligue1" &&
 											"text-green-500"
 										}`}
@@ -139,7 +139,7 @@ function SportTopChampionship(props) {
 						<div className=' pt-2 text-xs font-semibold'>
 							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-futbol text-rose-500'></i>
 								</div>
 
 								<div
@@ -150,7 +150,7 @@ function SportTopChampionship(props) {
 								>
 									<Link
 										to='/sport/sports/premieraleague'
-										className={`text-xs font-bold text-gray-400  px-2 ${
+										className={`text-xs font-bold text-sky-600  px-2 ${
 											location.pathname === "/sport/sports/premieraleague" &&
 											"text-green-500"
 										}`}
@@ -174,7 +174,7 @@ function SportTopChampionship(props) {
 								>
 									<Link
 										to='/sport/sports/bundesliga'
-										className={`text-xs font-bold text-gray-400  px-2 ${
+										className={`text-xs font-bold text-sky-600 px-2 ${
 											location.pathname === "/sport/sports/bundesliga" &&
 											"text-green-500"
 										}`}
@@ -187,7 +187,7 @@ function SportTopChampionship(props) {
 						<div className=' pt-2 text-xs font-semibold'>
 							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-futbol text-sky-400'></i>
 								</div>
 
 								<div
@@ -198,7 +198,7 @@ function SportTopChampionship(props) {
 								>
 									<Link
 										to='/sport/sports/eredevisie'
-										className={`text-xs font-bold text-gray-400  px-2 ${
+										className={`text-xs font-bold text-sky-600  px-2 ${
 											location.pathname === "/sport/sports/eredevisie" &&
 											"text-green-500"
 										}`}
@@ -211,22 +211,26 @@ function SportTopChampionship(props) {
 						<div className=' pt-2 text-xs font-semibold'>
 							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-futbol text-teal-500'></i>
 								</div>
 
 								<div>
-									<Link to='#'>NHL</Link>
+									<Link to='#' className='text-sky-600'>
+										NHL
+									</Link>
 								</div>
 							</div>
 						</div>
 						<div className=' pt-2 text-xs font-semibold'>
 							<div className=' px-4 flex space-x-2 mb-2 font-extrabold'>
 								<div>
-									<i class='fa-solid fa-futbol'></i>
+									<i class='fa-solid fa-futbol text-violet-500'></i>
 								</div>
 
 								<div>
-									<Link to='#'>MLB</Link>
+									<Link to='#' className='text-sky-600'>
+										MLB
+									</Link>
 								</div>
 							</div>
 						</div>

@@ -5,7 +5,7 @@ function LiveTopEvents(props) {
 	return (
 		<div className='w-full'>
 			<div className='  '>
-				<div className='p-4   w-full  text-white '>
+				<div className='p-4   w-full  bg-[#2C6CA7] '>
 					<button
 						className=' w-full flex  justify-between'
 						onClick={() => {
@@ -13,7 +13,7 @@ function LiveTopEvents(props) {
 						}}
 					>
 						<div className='flex space-x-2 text-xs font-bold uppercase'>
-							<button className='lg:font-bold'>Top Events</button>
+							<button className='lg:font-bold text-white'>Top Events</button>
 							<div className=' '>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
@@ -39,7 +39,9 @@ function LiveTopEvents(props) {
 								viewBox='0 0 24 24'
 								stroke-width='1.5'
 								stroke='currentColor'
-								class={`lg:w-4 lg:h-4 w-3 h-3 ${show2 && "rotate-180"}`}
+								class={`lg:w-4 lg:h-4 w-3 h-3 text-white ${
+									show2 && "rotate-180"
+								}`}
 							>
 								<path
 									stroke-linecap='round'
@@ -60,19 +62,19 @@ function LiveTopEvents(props) {
 											<i class='fa-solid fa-futbol'></i>
 										</div>
 										<div>T</div>
-										<div className='text-white'>{E.Title}</div>
+										<div className='text-sky-500'>{E.Title}</div>
 									</div>
 									<div className='px-4 flex space-x-2'>
 										<div>
 											<i class='fa-solid fa-shirt text-green-600'></i>
 										</div>
-										<div className='text-gray-400'>{E.TeamOne}</div>
+										<div className='text-sky-500'>{E.TeamOne}</div>
 									</div>
 									<div className='px-4 flex space-x-2'>
 										<div className=''>
 											<i class='fa-solid fa-shirt text-red-600'></i>
 										</div>
-										<div className='text-gray-400'>{E.TeamTwo}</div>
+										<div className='text-sky-500'>{E.TeamTwo}</div>
 									</div>
 								</div>
 							);

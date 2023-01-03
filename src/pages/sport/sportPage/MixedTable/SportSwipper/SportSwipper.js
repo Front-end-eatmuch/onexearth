@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { A11y, Navigation, Pagination } from "swiper";
+import { A11y, Autoplay, Navigation, Pagination } from "swiper";
 
 function SportSwipper() {
 	const [butter, setButter] = useState(false);
@@ -113,7 +113,7 @@ function SportSwipper() {
 				</button>
 			</div>
 			<Swiper
-				slidesPerView={4}
+				slidesPerView={3}
 				spaceBetween={5}
 				pagination={{
 					clickable: true,
@@ -122,13 +122,17 @@ function SportSwipper() {
 					prevEl: navigationNextRef9.current,
 					nextEl: navigationPrevRef9.current,
 				}}
-				modules={[Pagination, Navigation, A11y]}
-				className={`    w-full `}
+				modules={[Pagination, Navigation, A11y, Autoplay]}
+				autoplay={{
+					delay: 5000,
+					disableOnInteraction: false,
+				}}
+				className={` h-[200px]   w-full `}
 			>
 				{highlight.map((f) => {
 					return (
-						<SwiperSlide className='w-96 h-full bg-[#051747] px-2 py-5 rounded-lg'>
-							<div className='w-full h-full space-y-4'>
+						<SwiperSlide className='w-96  bg-[#225B8E] px-2 py-5 rounded-lg'>
+							<div className='w-full flex flex-col justify-center h-full space-y-4'>
 								<div className='flex w-full justify-between text-gray-300'>
 									<div>
 										<div className='text-start'>

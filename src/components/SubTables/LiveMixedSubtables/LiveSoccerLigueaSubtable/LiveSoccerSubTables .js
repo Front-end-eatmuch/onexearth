@@ -97,7 +97,7 @@ function LiveSoccerSubTables(props) {
 								{headerGroups.map((headerGroup) => (
 									<tr
 										{...headerGroup.getHeaderGroupProps()}
-										className='w-full bg-[#0F2644]  '
+										className='w-full bg-[#EEF4F8]  '
 									>
 										{headerGroup.headers.map((column) => (
 											<th
@@ -120,7 +120,7 @@ function LiveSoccerSubTables(props) {
 								return (
 									<tr
 										{...row.getRowProps()}
-										class=' border-b  border-gray-700 bg-ShaBlue-800 text-white   font-semibold '
+										class=' border-b  border-gray-700 bg-[#FFFFFF] text-black   font-semibold '
 										// onClick={() => {
 										// 	console.log(row);
 										// }}
@@ -140,7 +140,7 @@ function LiveSoccerSubTables(props) {
 																		row.id
 																	)
 													}
-													class={` border border-gray-700 text-sm !w-1/12 hover:bg-ShaBlue-700 cursor-pointer py-2 ${
+													class={` border border-gray-200 text-sm !w-1/12 hover:bg-sky-200 cursor-pointer py-2 ${
 														cell.value == blue && row.id ? null : null
 													}`}
 												>

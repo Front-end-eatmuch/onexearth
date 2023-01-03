@@ -8,14 +8,14 @@ function LiveSport() {
 	const [raceShow, setRaceShow] = useState(false);
 	return (
 		<div>
-			<div className='p-4   w-full  text-white '>
+			<div className='p-4   w-full  bg-[#2C6CA7] '>
 				<button
 					className=' w-full flex  justify-between'
 					onClick={() => {
 						setShow2(!show2);
 					}}
 				>
-					<div className='text-xs space-x-2 font-bold flex uppercase'>
+					<div className='text-xs text-white space-x-2  font-bold flex uppercase'>
 						<button>LiveSport</button>
 						<div className=' '>
 							<svg
@@ -41,7 +41,7 @@ function LiveSport() {
 							viewBox='0 0 24 24'
 							stroke-width='1.5'
 							stroke='currentColor'
-							class={`w-4 h-4 ${show2 && "rotate-180"}`}
+							class={`w-4 h-4 text-white ${show2 && "rotate-180"}`}
 						>
 							<path
 								stroke-linecap='round'
@@ -57,7 +57,7 @@ function LiveSport() {
 					<div>
 						<div className='p-4   '>
 							<button
-								className=' w-full flex  justify-between text-gray-300'
+								className=' w-full flex  justify-between text-sky-500'
 								onClick={() => {
 									setCricketShow(!cricketShow);
 								}}
@@ -199,7 +199,7 @@ function LiveSport() {
 					<div>
 						<div className='p-4   w-full  '>
 							<button
-								className=' w-full flex  justify-between text-gray-300'
+								className=' w-full flex  justify-between text-sky-500'
 								onClick={() => {
 									setSoccerShow(!soccerShow);
 								}}
@@ -341,7 +341,7 @@ function LiveSport() {
 					<div>
 						<div className='p-4   w-full  '>
 							<button
-								className=' w-full flex  justify-between text-gray-300'
+								className=' w-full flex  justify-between text-sky-500'
 								onClick={() => {
 									setVolleyShow(!volleyShow);
 								}}
@@ -452,7 +452,7 @@ function LiveSport() {
 								</div>
 								<div className='p-4   w-full '>
 									<button
-										className=' w-full flex  justify-between text-gray-300'
+										className=' w-full flex  justify-between text-sky-500'
 										onClick={() => {}}
 									>
 										<div className='text-xs font-bold uppercase  space-x-2'>
@@ -483,7 +483,7 @@ function LiveSport() {
 					<div>
 						<div className='p-4   w-full  '>
 							<button
-								className=' w-full flex  justify-between text-gray-300'
+								className=' w-full flex  justify-between text-sky-500'
 								onClick={() => {
 									setRaceShow(!raceShow);
 								}}

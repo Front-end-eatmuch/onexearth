@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { A11y, Navigation, Pagination } from "swiper";
+import { A11y, Autoplay, Navigation, Pagination } from "swiper";
 
 function HomeSwipper() {
 	const [butter, setButter] = useState(false);
@@ -61,7 +61,7 @@ function HomeSwipper() {
 
 	return (
 		<div
-			className={`w-full  relative hover  `}
+			className={`w-full h-full  relative hover  `}
 			onMouseEnter={() => setButter(!butter)}
 			onMouseLeave={() => setButter(!butter)}
 		>
@@ -113,7 +113,7 @@ function HomeSwipper() {
 				</button>
 			</div>
 			<Swiper
-				slidesPerView={4}
+				slidesPerView={1}
 				spaceBetween={5}
 				pagination={{
 					clickable: true,
@@ -122,13 +122,17 @@ function HomeSwipper() {
 					prevEl: navigationNextRef9.current,
 					nextEl: navigationPrevRef9.current,
 				}}
-				modules={[Pagination, Navigation, A11y]}
-				className={`    w-full `}
+				modules={[Pagination, Navigation, A11y, Autoplay]}
+				autoplay={{
+					delay: 2500,
+					disableOnInteraction: false,
+				}}
+				className={` h-full   w-full `}
 			>
 				{highlight.map((f) => {
 					return (
-						<SwiperSlide className='w-96 h-full bg-[#051747] px-2 py-5 rounded-lg'>
-							<div className='w-full h-full space-y-4'>
+						<SwiperSlide className='w-96 h-full bg-[#225B8E] px-2 py-5 rounded-lg'>
+							<div className='w-full flex flex-col justify-center h-full space-y-4'>
 								<div className='flex w-full justify-between text-white'>
 									<div>
 										<div className='text-start'>
