@@ -22,7 +22,7 @@ function CasinoAll() {
 	const { casinoData } = useOutletContext();
 
 	return (
-		<div className=' w-full space-y-10 px-5 py-5 '>
+		<div className=' w-full space-y-10 px-5  '>
 			<CasinoPopularSlider casinoData={casinoData} />
 			<CasinoNewgameSlider casinoData={casinoData} />
 			<CasinoSlotsSlider casinoData={casinoData} />

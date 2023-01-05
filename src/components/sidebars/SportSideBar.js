@@ -190,7 +190,7 @@ function SportSideBar() {
 
 	return (
 		<div className='w-full h-screen overflow-y-scroll   px-1 bg-white   '>
-			<div className='relative  h-full space-y-4 pb-10 '>
+			<div className='relative  h-full space-y-4 pb-10 pt-1 '>
 				<SportTopChampionship championship={championship} />
 				<SportTopEvents topSportEvents={topSportEvents} />
 				<SportPopularSports popularSport={popularSport} games={games} />

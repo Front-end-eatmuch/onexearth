@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules
 import {
 	Autoplay,
 	EffectCube,
@@ -14,7 +12,7 @@ import {
 	Pagination,
 } from "swiper";
 
-function Swipperslide() {
+function CasinoLiveHomeCarousel() {
 	const [adviews, setAdviews] = useState([
 		{
 			id: 1,
@@ -71,8 +69,8 @@ function Swipperslide() {
 				>
 					{adviews.map((v, i) => {
 						return (
-							<SwiperSlide className=' !h-small2 !w-full lg:!h-small2 lg:!w-big'>
-								<div className={` !w-full md:!w-big !h-full relative`}>
+							<SwiperSlide className=' !h-small2 !w-full '>
+								<div className={` !w-full !h-full relative`}>
 									<img src={v.AdImage} alt='' className='!w-full !h-full' />
 									<div className='absolute top-0 right-0 left-0 bottom-0'>
 										<div className='w-full h-full flex flex-col pl-14 justify-center space-y-4 text-white'>
@@ -97,4 +95,4 @@ function Swipperslide() {
 	);
 }
 
-export default Swipperslide;
+export default CasinoLiveHomeCarousel;
