@@ -60,7 +60,7 @@ function Ligue1Table() {
 		},
 	]);
 	return (
-		<div>
+		<div className='px-2'>
 			<div className='px-4 py-2 flex justify-between  text-white'>
 				<div>Ligue1</div>
 			</div>
