@@ -141,7 +141,7 @@ function Navbar() {
 					</div>
 				</div>
 				<div className='flex'>
-					{false ? (
+					{true ? (
 						<div className='flex space-x-3 text-white px-2'>
 							<div className='flex'>
 								<div className='relative'>
