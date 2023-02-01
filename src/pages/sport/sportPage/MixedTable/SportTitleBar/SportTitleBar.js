@@ -10,10 +10,10 @@ function SportTitleBar() {
 	};
 	return (
 		<div className='w-full overflow-x-scroll bg-[#1A5683]'>
-			<div className=' flex justify-between  py-2 w-full px-4'>
+			<div className=' flex space-x-2   py-2 w-full px-4'>
 				<Link
 					to='volleyball'
-					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg  ${
+					className={`text-xs font-medium  text-gray-400 border border-gray-700 px-2   ${
 						location.pathname === "/sport/sports/sporttables/volleyball" && ""
 					}`}
 				>
@@ -32,7 +32,7 @@ function SportTitleBar() {
 
 				<Link
 					to='soccer'
-					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg   ${
+					className={`text-xs font-medium  text-gray-400 border border-gray-700 px-2    ${
 						location.pathname === "/sports/sporttables/soccer" && ""
 					}`}
 				>
@@ -51,7 +51,7 @@ function SportTitleBar() {
 
 				<Link
 					to='basketball'
-					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg   ${
+					className={`text-xs font-medium  text-gray-400 border border-gray-700 px-2    ${
 						location.pathname === "/sports/sporttables/basketball" && ""
 					}`}
 				>
@@ -70,7 +70,7 @@ function SportTitleBar() {
 
 				<Link
 					to='cricket'
-					className={`text-xs font-bold  text-gray-400 border border-gray-700 px-2 rounded-lg   ${
+					className={`text-xs font-medium  text-gray-400 border border-gray-700 px-2    ${
 						location.pathname === "/sports/sporttables/cricket" && ""
 					}`}
 				>
@@ -105,7 +105,7 @@ function SportTitleBar() {
 
 				<Link
 					to='baseball'
-					className={`text-xs font-bold space-x-2 text-gray-400 border border-gray-700 px-2 rounded-lg  flex items-center ${
+					className={`text-xs font-medium space-x-2 text-gray-400 border border-gray-700 px-2   flex items-center ${
 						location.pathname === "/sports/sporttables/baseball" &&
 						"text-green-500"
 					}`}
@@ -141,7 +141,7 @@ function SportTitleBar() {
 
 				<Link
 					to='tennisball'
-					className={`text-xs font-bold space-x-2 text-gray-400 border border-gray-700 px-2 rounded-lg  flex items-center ${
+					className={`text-xs font-medium space-x-2 text-gray-400 border border-gray-700 px-2   flex items-center ${
 						location.pathname === "/sports/sporttables/tennisball" &&
 						"text-green-500"
 					}`}

@@ -7,6 +7,8 @@ import SportTable from "./SoccerTable/SoccerTable";
 import SportTitleBar from "./SportTitleBar/SportTitleBar";
 import SoccerTable from "./SoccerTable/SoccerTable";
 import SportSwipper from "./SportSwipper/SportSwipper";
+import Swipperslide from "../../../../components/Swipperslide";
+import SportSwipperCarousel from "./SportSwipperCarousel/SportSwipperCarousel";
 
 function SportContainer() {
 	const [sportTableaus, setSportTableaus] = useState([
@@ -58,11 +60,17 @@ function SportContainer() {
 	let location = useLocation();
 	return (
 		<div className='px-2 h-screen'>
-			<div className='w-full mb-2  px-4 py-2 flex justify-between bg-[#2C6CA7]   text-white'>
+			{/* <div className='w-full mb-2  px-4 py-2 flex justify-between bg-[#2C6CA7]   text-white'>
 				<div>Sportbets</div>
 			</div>
 			<div className='mb-2'>
 				<SportSwipper />
+			</div> */}
+			<div>
+				<SportSwipperCarousel />
+			</div>
+			<div className='w-full mt-2  px-4 py-2 flex justify-between bg-[#2C6CA7]   text-white'>
+				<div>Sportbets</div>
 			</div>
 			{
 				<div className='w-full  overflow-x-scroll '>

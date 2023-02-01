@@ -5,7 +5,8 @@ import {
 	RouterProvider,
 	Routes,
 } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
+import NavbarTop from "../components/NavbarTop/NavbarTop";
 import { Context } from "../context/Context";
 // import routes from "../Routes";
 import Routess from "../Routes";
@@ -18,11 +19,7 @@ function Mainlayout() {
 			<BrowserRouter>
 				<div className='relative  '>
 					<div className='fixed top-0 z-40'>
-						<div className='h-8  w-full flex'>
-							<div className=' w-full bg-[#20649A]'></div>
-							<div className='w-full bg-white'></div>
-							<div className='w-full bg-[#20649A]'></div>
-						</div>
+						<NavbarTop />
 						<Navbar />
 					</div>
 					<div className='mt-20'>
